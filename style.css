@@ -1,0 +1,9 @@
+.mapWrapper{
+    transform: scale(.65);
+    padding-top: 0%;
+    margin-top:-12.5%;
+    
+}
+g :hover{
+    fill:blue;
+}
