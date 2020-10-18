@@ -7,14 +7,13 @@ from logging.handlers import RotatingFileHandler
 import wget
 import os
 import math
-import hashlib
-import pickle
 import io
 import shutil
 
 
 @app.route('/')
 def index():
+    app_log.info(f"User: {request.remote_addr}")
     return render_template("index.html")
 
 @app.route('/about')
@@ -31,7 +30,7 @@ logFile = 'log.log'
 my_handler = RotatingFileHandler(logFile, mode='a', maxBytes=5*1024*1024,
                                  backupCount=2, encoding=None, delay=0)
 my_handler.setFormatter(format)
-my_handler.setLevel(logging.ERROR)
+my_handler.setLevel(logging.INFO)
 
 app_log = logging.getLogger('root')
 app_log.setLevel(logging.DEBUG)
