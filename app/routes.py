@@ -10,7 +10,7 @@ import math
 import io
 import shutil
 
-
+#Default Route
 @app.route('/')
 def index():
     app_log.info(f"User: {request.remote_addr}")
