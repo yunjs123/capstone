@@ -10,6 +10,10 @@ import math
 import io
 import shutil
 
+email = "jstrahl1@uncc.edu"
+key = "bluecat44"
+
+
 #Default Route
 @app.route('/')
 def index():
@@ -23,6 +27,17 @@ def about():
 @app.route('/favicon.ico')
 def favicon():
     return None
+
+@app.route('/search')
+def search():
+    state = request.args['search']
+    data = download(state)
+    return data
+
+def download(location):
+    url = f"https://aqs.epa.gov/data/api/list/countiesByState?email={email}&key={key}&state=37"
+    data = wget.download(url)
+    return data
 
 #setting up the server log
 format = logging.Formatter('%(asctime)s %(message)s')
