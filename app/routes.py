@@ -26,16 +26,30 @@ def about():
 
 @app.route('/favicon.ico')
 def favicon():
-    return None
+    return ''
 
-@app.route('/search')
-def search():
-    state = request.args['search']
-    data = download(state)
-    return data
+@app.route('/map', methods=['GET', 'POST'])
+def map():
+    if request.method == 'POST':
+        print("POST REQUEST")
+        state = request.form.get('search')
+        data = download(state)
+        
+        return render_template("index.html", data=data)
+    
+
+
+    return "ERROR"
+
+
+def convert_state(state):
+    states = []
+    num = states.index(state)
+    return state
+
 
 def download(location):
-    url = f"https://aqs.epa.gov/data/api/list/countiesByState?email={email}&key={key}&state=37"
+    url = f"https://aqs.epa.gov/data/api/dailyData/byState?email={email}&key={key}&param=45201&bdate=20200915&edate=20201101&state=37"
     data = wget.download(url)
     return data
 
