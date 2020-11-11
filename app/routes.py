@@ -9,16 +9,19 @@ import os
 import math
 import io
 import shutil
+import json
 
 email = "jstrahl1@uncc.edu"
 key = "bluecat44"
+daily_url = "https://aqs.epa.gov/data/api/dailyData/byState?email=jstrahl1@uncc.edu&key=bluecat44&param=44201&bdate=20201110&edate=20201110&state=37"
+
 
 
 #Default Route
 @app.route('/')
 def index():
     app_log.info(f"User: {request.remote_addr}")
-    return render_template("index.html")
+    return render_template("index.html", data='')
 
 @app.route('/about')
 def about():
@@ -34,11 +37,7 @@ def map():
         print("POST REQUEST")
         state = request.form.get('search')
         data = download(state)
-        
         return render_template("index.html", data=data)
-    
-
-
     return "ERROR"
 
 
@@ -49,8 +48,10 @@ def convert_state(state):
 
 
 def download(location):
-    url = f"https://aqs.epa.gov/data/api/dailyData/byState?email={email}&key={key}&param=45201&bdate=20200915&edate=20201101&state=37"
-    data = wget.download(url)
+    url = f"https://aqs.epa.gov/data/api/dailyData/byState?email={email}&key={key}&param=44201&bdate=20200901&edate=20200901&state={location}"
+    data_name = wget.download(url, out=f"app/files/{location}.json")
+    with open(data_name) as f:
+        data = json.load(f)
     return data
 
 #setting up the server log
