@@ -1,0 +1,49 @@
+2020-11-12 14:59:22,789  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+2020-11-12 15:08:39,913  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-12 15:13:26,702  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+2020-11-12 15:13:31,447 User: 127.0.0.1
+2020-11-12 15:13:31,482 127.0.0.1 - - [12/Nov/2020 15:13:31] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-12 15:13:31,879 127.0.0.1 - - [12/Nov/2020 15:13:31] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-12 15:13:31,997 127.0.0.1 - - [12/Nov/2020 15:13:31] "[37mGET /static/jquery.js HTTP/1.1[0m" 200 -
+2020-11-12 15:13:32,061 127.0.0.1 - - [12/Nov/2020 15:13:32] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-12 15:14:01,537 User: 127.0.0.1
+2020-11-12 15:14:01,544 127.0.0.1 - - [12/Nov/2020 15:14:01] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-12 15:14:07,915 User: 127.0.0.1
+2020-11-12 15:14:07,915 127.0.0.1 - - [12/Nov/2020 15:14:07] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-12 15:14:10,065 Exception on /about [GET]
+Traceback (most recent call last):
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Vues\Desktop\Desktop Files\WebApp\app\routes.py", line 28, in about
+    return render_template("about.html")
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\vues\appdata\local\programs\python\python39\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: about.html
+2020-11-12 15:14:10,135 127.0.0.1 - - [12/Nov/2020 15:14:10] "[35m[1mGET /about HTTP/1.1[0m" 500 -
+2020-11-12 15:14:10,316 127.0.0.1 - - [12/Nov/2020 15:14:10] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-12 15:14:12,558 User: 127.0.0.1
+2020-11-12 15:14:12,559 127.0.0.1 - - [12/Nov/2020 15:14:12] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-12 15:14:13,898 User: 127.0.0.1
+2020-11-12 15:14:13,898 127.0.0.1 - - [12/Nov/2020 15:14:13] "[37mGET / HTTP/1.1[0m" 200 -

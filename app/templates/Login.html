@@ -1,0 +1,61 @@
+
+<!--Client ID
+130917623605-ashg9mjp4e1scmfhon00a6r4sn3mbmf9.apps.googleusercontent.com
+
+Client Secret
+TATiceDDGyqTIyOQtSVg91sd
+
+
+Google Platform
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+Google Sign in button
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+client ID
+<meta name="google-signin-client_id" content=gapi.auth2.init()>
+
+For testing purposes, type into address bar the following: localhost5500/Login.html
+-->
+
+<!Doctype html>
+<html lang='en'>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Google Login demo</title>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        
+        <!-- Google Client ID -->
+        <meta name="google-signin-client_id" content="130917623605-ashg9mjp4e1scmfhon00a6r4sn3mbmf9.apps.googleusercontent.com">
+        
+        <!-- Google Library -->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        
+        <!-- JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!-- js for login.html -->
+        <script src="GoogleLogin.js"></script>
+
+    </head>
+
+    <body>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </body>
+</html>
+
+<script>
+    function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+</script>
