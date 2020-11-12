@@ -27,6 +27,10 @@ def index():
 def about():
     return render_template("about.html")
 
+@app.route('/home')
+def home():
+    return render_template("home.html")
+
 @app.route('/favicon.ico')
 def favicon():
     return ''
