@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luckiest+Guy&family=Ropa+Sans&display=swap');
 .mapWrapper{
     transform: scale(.65);
     padding-top: 0%;
@@ -29,16 +30,11 @@ nav ul li a{
     display:flex;
     color:#111;
     margin: 12px;
+    font-family: 'Luckiest Guy', cursive;
 }
 nav ul li a:hover{
-    background-color: #7184f0;
-    color:#fff;
-    transition: all ease 0.2s;
-}
-
-nav form{
-    position:absolute;
-    right:0;    
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
 }
 
 body{
@@ -50,16 +46,48 @@ body{
 }
 
 .welcome{
-    font-size: 4em;
-    margin-top:.3%;
-    margin-bottom: .5em;
-    text-align: center;
+    font-size: 7em;
+    padding-left: 10%;
+    padding-top: 5%;
+    font-family: 'Indie Flower', cursive;
 }
 
-body p{
-    margin: auto;
-    margin-bottom: 3em;
-    font-weight: 200;
-    line-height: 1.4em;
-    text-align: center;
+body h2{
+    padding-left: 10%;
+    font-family: 'Ropa Sans', sans-serif;
+}
+.search_box{
+    width:50%;
+    position: relative;
+    top: 30px;
+    left: 23%;
+}
+.search_box input[type="text"]{
+     width: 100%;
+     padding: 20px;
+     padding-right: 60px;
+     background: rgba(0,0,0,0.3);
+     border: 2px solid #fff;
+     border-radius: 10px;
+     font-size: 18px;
+     color: #fff;
+     outline: none;
+}
+
+::-webkit-inputplaceholder{
+    color: #fff;
+}
+::-moz-placeholder{
+    color:#fff;
+}
+::-ms-input-placeholder{
+    color: #fff; 
+}
+.fa-search{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    font-size: 25px; 
+    right: -70px;
 }
