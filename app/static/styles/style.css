@@ -35,33 +35,31 @@ nav ul li a:hover{
     color:#fff;
     transition: all ease 0.2s;
 }
-.container{
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
+nav form{
+    position:absolute;
+    right:0;    
 }
-.hero{
-    height: 100%;
-    width: 100%;
-    background: url("/static/background.jpg");
+
+body{
+    background-image:url("/static/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-}
-.hero-content {
-    text-align: center;
+    background-attachment: fixed;
 }
 
-.hero-content h1{
+.welcome{
     font-size: 4em;
     margin-top:.3%;
     margin-bottom: .5em;
+    text-align: center;
 }
 
-.hero-content p{
+body p{
     margin: auto;
     margin-bottom: 3em;
     font-weight: 200;
     line-height: 1.4em;
+    text-align: center;
 }
