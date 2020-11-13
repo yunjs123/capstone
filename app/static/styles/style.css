@@ -19,7 +19,7 @@ nav{
 }
 nav #top{
     position: absolute;
-    left: 10%;
+    left: 2%;
 }
 nav ul{
     display:flex;
@@ -52,14 +52,12 @@ nav ul li a:hover{
     background-position: center center;
 }
 .hero-content {
-    padding-top: em(70);
     text-align: center;
 }
 
 .hero-content h1{
     font-size: 4em;
     margin-bottom: .5em;
-    margin-top: 0em;
 }
 
 .hero-content p{
