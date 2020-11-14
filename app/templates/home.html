@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/ef6f3d99fc.js" crossorigin="anonymous"></script>
     <title>Home</title>
 </head>
+
 <body>
     <nav>
         <!--logo here-->
@@ -26,10 +27,10 @@
     <h2>SOME DESCRIPTION OF OUR SITE</h2>
         <div class="search_box">
             <form action="/map" method="POST"></form>
-                <input class="search_text" type="text" name="search" placeholder="Which state do you live in?">
-                <a class="search_button" href='/chart'>
+                <input class="search_text" type="text" name="search" id="search" placeholder="Which state do you live in?">
+                <button  type="submit" class="search_button" href='/chart'>
                     <i class="fas fa-search"></i>
-                </a>
+                </input>
             </form>
         </div>
 </body>
