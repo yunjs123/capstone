@@ -10,6 +10,7 @@
     <title>Chart</title>
 </head>
 
+
 <body>
         <nav>
             <!--logo here-->
@@ -151,7 +152,7 @@
     <canvas id="myChart" width="400" height="400"></canvas>
 </body>
 
-<script>
+<script type=text/javascript src="{{ url_for('static', filename='jquery.js') }}">
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'bar',
@@ -189,6 +190,42 @@
             }
         }
     });
-</script>
+ 
+            
+            console.log({{data|tojson}});
+            
+        
+            $(document).ready(function(){
+                $('#US-NC').on("click", function(e){
+                    alert('evento');
+                });
+            });
+
+            
+            $('#US-NC').on('click');
+            
+        
+        
+        
+            function search_state(id) {
+                console.log("YES");
+                const form = document.createElement('form');
+                form.method = method;
+                form.action = path;
+        
+                const hiddenField = document.createElement('input');
+                hiddenField.type = 'hidden';
+                hiddenField.name = "search";
+                hiddenField.value = id;
+        
+                form.appendChild(hiddenField);
+                   
+        
+                document.body.appendChild(form);
+                form.submit();
+            }
+            
+       
+    </script>
 
 </html>

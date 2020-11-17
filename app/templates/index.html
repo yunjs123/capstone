@@ -12,36 +12,6 @@
 
 
 
-<script type=text/javascript src="{{ url_for('static', filename='jquery.js') }}">
-            
-    console.log({{data|tojson}});
-    
-
-    jQuery(function($){
-        $("#US-NC").click(search_state(37));
-    });
-
-
-
-    function search_state(id) {
-        const form = document.createElement('form');
-        form.method = method;
-        form.action = path;
-
-        const hiddenField = document.createElement('input');
-        hiddenField.type = 'hidden';
-        hiddenField.name = "search";
-        hiddenField.value = id;
-
-        form.appendChild(hiddenField);
-           
-
-        document.body.appendChild(form);
-        form.submit();
-    }
-    
-</script>
-
 
 <body>
     <nav>

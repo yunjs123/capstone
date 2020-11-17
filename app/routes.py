@@ -21,19 +21,15 @@ daily_url = "https://aqs.epa.gov/data/api/dailyData/byState?email=jstrahl1@uncc.
 @app.route('/')
 def index():
     app_log.info(f"User: {request.remote_addr}")
-    return render_template("index.html", data='')
+    return render_template("home.html", data='')
 
 @app.route('/about')
 def about():
     return render_template("about.html")
 
-@app.route('/home')
-def home():
-    return render_template("home.html")
-
 @app.route('/chart')
 def chart():
-    return render_template("chart.html")
+    return render_template("chart.html", data='')
 
 @app.route('/favicon.ico')
 def favicon():
@@ -44,15 +40,17 @@ def map():
     if request.method == 'POST':
         print("POST REQUEST")
         state = request.form.get('search')
-        data = download(state)
-        return render_template("index.html", data=data)
+        data = download(convert_state(state))
+        return render_template("chart.html", data=data)
     return "ERROR"
 
 
 def convert_state(state):
-    states = []
-    num = states.index(state)
-    return state
+    state_names = ["" , "alaska", "alabama", "arkansas", "arizona", "california", "colorado", "connecticut", "delaware", "florida", "georgia", "hawaii", "iowa", "idaho", "illinois", "indiana", "kansas", "kentucky", "louisiana", "massachusetts", "maryland", "maine", "michigan", "minnesota", "missouri", "mississippi", "montana", "north narolina", "north dakota", "nebraska", "new hampshire", "new jersey", "new mexico", "nevada", "new york", "ohio", "oklahoma", "oregon", "pennsylvania", "rhode island", "south carolina", "south dakota", "tennessee", "texas", "utah", "virginia", "vermont", "washington", "wisconsin", "west virginia", "wyoming"]
+    state = state.lower() 
+    num = state_names.index(state)
+    print(num)
+    return num
 
 
 def download(location):
