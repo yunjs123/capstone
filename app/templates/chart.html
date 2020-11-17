@@ -17,7 +17,7 @@
             <h1 id="top">LogoHere</h1>
             <!--menu here-->
             <ul class="menu">
-                <li><a href="/home">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href=#>Sign in</a></li>
                 <li><a href="/chart">Chart</a></li>
@@ -160,9 +160,9 @@
 
 
 
-<script type=text/javascript src="{{ url_for('static', filename='jquery.js') }}"><script>
+<script type=text/javascript src="{{ url_for('static', filename='jquery.js') }}"></script>
     
-<script>    
+<script>
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'bar',
@@ -207,18 +207,25 @@
         
             $(document).ready(function(){
                 $('#US-NC').on("click", function(e){
-                    alert('evento');
+                    $.post('/map',
+                    {search: 'NC'}
+                    )
                 });
             });
 
             
-            $('#US-NC').on('click');
             
             
        
-    </script>
+</script>
 
-    <script>console.log({{data|tojson}})</script>
+    <script>
+        console.log({{data|tojson}});
+        var data1 = {{data|tojson}};
+
+        document.getElementById('myData').innerHTML += "<br>" + data1[8];
+        document.getElementById('myData').innerHTML += "<br>" + data1[5] + ": " + data1[7] + " " + data1[6];
+    </script>
 
 
 </html>

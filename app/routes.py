@@ -43,7 +43,7 @@ def map():
         data = download(convert_state(state))
         data = daily_data[4446]
         return render_template("chart.html", data=data)
-    return "ERROR"
+    return render_template("chart.html", data='')
 
 
 def convert_state(state):
