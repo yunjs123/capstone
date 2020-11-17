@@ -150,9 +150,19 @@
     </div>
 </div>
     <canvas id="myChart" width="400" height="400"></canvas>
+
+
+<div id="myData"></div>
+
+
 </body>
 
-<script type=text/javascript src="{{ url_for('static', filename='jquery.js') }}">
+
+
+
+<script type=text/javascript src="{{ url_for('static', filename='jquery.js') }}"><script>
+    
+<script>    
     var ctx = document.getElementById('myChart');
     var myChart = new Chart(ctx, {
         type: 'bar',
@@ -192,7 +202,7 @@
     });
  
             
-            console.log({{data|tojson}});
+            
             
         
             $(document).ready(function(){
@@ -204,28 +214,11 @@
             
             $('#US-NC').on('click');
             
-        
-        
-        
-            function search_state(id) {
-                console.log("YES");
-                const form = document.createElement('form');
-                form.method = method;
-                form.action = path;
-        
-                const hiddenField = document.createElement('input');
-                hiddenField.type = 'hidden';
-                hiddenField.name = "search";
-                hiddenField.value = id;
-        
-                form.appendChild(hiddenField);
-                   
-        
-                document.body.appendChild(form);
-                form.submit();
-            }
             
        
     </script>
+
+    <script>console.log({{data|tojson}})</script>
+
 
 </html>
