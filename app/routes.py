@@ -31,6 +31,10 @@ def about():
 def chart():
     return render_template("chart.html", data='')
 
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
 @app.route('/favicon.ico')
 def favicon():
     return ''
