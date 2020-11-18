@@ -37,7 +37,7 @@
                         stroke-width: 0.5;
                     }
                 </style>
-
+            
                 <!-- All areas are listed in the line below. You can use this list in your script. -->
                 <!--{id:"US-AK"},{id:"US-AL"},{id:"US-AR"},{id:"US-AZ"},{id:"US-CA"},{id:"US-CO"},{id:"US-CT"},{id:"US-DC"},{id:"US-DE"},{id:"US-FL"},{id:"US-GA"},{id:"US-HI"},{id:"US-IA"},{id:"US-ID"},{id:"US-IL"},{id:"US-IN"},{id:"US-KS"},{id:"US-KY"},{id:"US-LA"},{id:"US-MA"},{id:"US-MD"},{id:"US-ME"},{id:"US-MI"},{id:"US-MN"},{id:"US-MO"},{id:"US-MS"},{id:"US-MT"},{id:"US-NC"},{id:"US-ND"},{id:"US-NE"},{id:"US-NH"},{id:"US-NJ"},{id:"US-NM"},{id:"US-NV"},{id:"US-NY"},{id:"US-OH"},{id:"US-OK"},{id:"US-OR"},{id:"US-PA"},{id:"US-RI"},{id:"US-SC"},{id:"US-SD"},{id:"US-TN"},{id:"US-TX"},{id:"US-UT"},{id:"US-VA"},{id:"US-VT"},{id:"US-WA"},{id:"US-WI"},{id:"US-WV"},{id:"US-WY"}-->
 
@@ -149,7 +149,7 @@
         </svg>
     </div>
 </div>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
 
 
 <div id="myData"></div>
@@ -199,12 +199,12 @@
                 }]
             }
         }
-    });
- 
-            
-            
-            
-        
+    });         
+       
+</script>
+
+    <script>
+
             $(document).ready(function(){
                 $('#US-NC').on("click", function(e){
                     $.post('/map',
@@ -213,18 +213,15 @@
                 });
             });
 
-            
-            
-            
-       
-</script>
 
-    <script>
         console.log({{data|tojson}});
         var data1 = {{data|tojson}};
 
-        document.getElementById('myData').innerHTML += "<br>" + data1[8];
-        document.getElementById('myData').innerHTML += "<br>" + data1[5] + ": " + data1[7] + " " + data1[6];
+        document.getElementById('myData').innerHTML += "<br><h2>" + data1[0] + 
+                                        "</h2><br><strong>" + data1[1] + "</strong>: " + data1[3] + " " + data1[2] +
+                                        "</h2><br><strong>" + data1[4] + "</strong>: " + data1[6] + " " + data1[5] + 
+                                        "</h2><br><strong>" + data1[7] + "</strong>: " + data1[9] + " " + data1[8] +
+                                        "</h2><br><strong>" + data1[10] + "</strong>: " + data1[12] + " " + data1[11];;
     </script>
 
 

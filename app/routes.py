@@ -46,7 +46,25 @@ def map():
         state = request.form.get('search')
         data = download(convert_state(state))
         data = daily_data[4446]
-        return render_template("chart.html", data=data)
+        data_collected = [daily_data[4446][8]]
+
+        data_collected.append(daily_data[4445][5])
+        data_collected.append(daily_data[4445][6])
+        data_collected.append(daily_data[4445][7])
+
+        data_collected.append(daily_data[4446][5])
+        data_collected.append(daily_data[4446][6])
+        data_collected.append(daily_data[4446][7])
+
+        data_collected.append(daily_data[4447][5])
+        data_collected.append(daily_data[4447][6])
+        data_collected.append(daily_data[4447][7])
+
+        data_collected.append(daily_data[4448][5])
+        data_collected.append(daily_data[4448][6])
+        data_collected.append(daily_data[4448][7])
+        #4454
+        return render_template("chart.html", data=data_collected)
     return render_template("chart.html", data='')
 
 

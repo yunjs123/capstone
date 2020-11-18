@@ -65,6 +65,16 @@ body h2{
     transform: translate(5%, -300%);
     font-family: 'Ropa Sans', sans-serif;
 }
+
+#myData{
+    margin: auto;
+    width: 50%;
+    padding-top: 40px;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
  /*
 .search_box{
     position: absolute;

@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>About Us</title>
-        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/about.css') }}">
     </head>
 
 <!--
@@ -31,7 +31,7 @@
 -->
 
 <div id="calltoaction-form" class="teaser-form">
-    <div class="form-title">
+    <!-- <div class="form-title">
       <h3>sample form</h3>
     </div>
     <form id="contact_form" action="_contact-us.php" method="post">
@@ -66,6 +66,24 @@
     </form>
 
       <button type="button" class="btn">Submit</button>
+  -->
+
+
+
+<body>
+  <h1>About Us</h1>
+  <h2>The Project</h2>
+  AtmoDust is a senior design project done by 3 UNCC Undergraduates in The College of Computing and Informatics. Our goal was to make a website
+  that enables users to check air quality from their nearest air sampling location. We use a free public API provided by the EPA to 
+  deliever air quality information to users in an informative and easy to understand way.
+  <h2>Students</h2>
+  Jay Strahler
+  Vue Vang
+  JaeSeong Yun
+  <h2>Acknowledgements</h2>
+  We would like to thank the EPA for providing the information publically and free.
+  A special thanks goes to UNCC and the College of Computing and Informatics
+</body>
 
 
 
