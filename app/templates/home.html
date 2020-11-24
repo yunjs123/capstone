@@ -8,18 +8,6 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <script src="https://kit.fontawesome.com/ef6f3d99fc.js" crossorigin="anonymous"></script>
-    <!-- Google Client ID -->
-    <meta name="google-signin-client_id" content="130917623605-ashg9mjp4e1scmfhon00a6r4sn3mbmf9.apps.googleusercontent.com">
-
-    <!-- Google Library -->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-      
-    <!-- JQUERY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      
-    <!-- js for login.html -->
-    <script src="GoogleLogin.js"></script>
-    
     <title>Home</title>
 
     
@@ -40,9 +28,6 @@
             <input type="text" name="search" id="search"></input>
             <input type="submit">
         </form>
-        
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
     </nav>
     <h1 class="welcome"> AtmoDust</h1>
     <h2>SOME DESCRIPTION OF OUR SITE</h2>
@@ -54,18 +39,6 @@
             </form>
         </div>
 
-      
-
 </body>
 
 </html>
-
-<script>
-    function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-</script>
