@@ -17,6 +17,7 @@ client ID
 
 For testing purposes, type into address bar the following: localhost5500/Login.html
 
+        <link rel="stylesheet" href="login.css">
 
 -->
 
@@ -49,24 +50,21 @@ For testing purposes, type into address bar the following: localhost5500/Login.h
     </head>
 
     <body>
-        <div class="login">
-
+        <div class="dbody">
             <h1>Login</h1>
-            <div class="textbox">
-                <input type="email" name="email" placeholder="Email">
+            <div class="inputCen">
+                <input id="testinput" type="email" placeholder="Email">
+                <input id="testinput" type="password" placeholder="Password">
             </div>
-            <div class="textbox">
-                <input type="password" name="password" placeholder="Password">
+            <div class="btnCen">
+                <input class="btn" type="button" name="btn" value="Register">
+                <input class="btn" type="button" name="btn" value="Login">
+                <div class="lineA"></div>
+                <div style="display:inline-block;">OR</div>
+                <div class="lineB"></div>
+                <div class="g-signin2" data-width="120" data-height="30" data-onsuccess="onSignIn"></div>
             </div>
-            <input class="btn" type="button" name="btn" value="Register">
-            <input class="btn" type="button" name="btn" value="Login">
-            <div class="lineA"></div>
-            <div style="display:inline-block;">OR</div>
-            <div class="lineA"></div>
-            <div class="g-signin2" data-width="120%" data-height="30" data-onsuccess="onSignIn"></div>
-
         </div>
-
     </body>
 </html>
 

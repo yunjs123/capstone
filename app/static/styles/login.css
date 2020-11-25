@@ -1,42 +1,89 @@
-body {
-margin: 0;
-padding: 0;
-border-bottom: black;
+body{
+
 }
 
-.login{
-  width: 280px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
+.dbody{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    height: 350px;
+    background-color: #03cffc;
+    border: 2px solid #000000;
+    transform: translate(-50%, -50%); 
 }
 
-.textbox{
-  width: 100%;
-  overflow: hidden;
-  font-size: 20px;
-  padding: 8px 0;
-  margin: 8px 0;
+h1{
+    text-align: center;
+}
 
+#testinput{
+    margin: 10px auto;
+    display: block;
+    padding: 5px;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+input[type=email]:focus{
+  outline: none;  
+  box-shadow: 0px 0px 10px #000;
+ 
+
+}
+
+input[type=password]:focus{
+  outline: none;   
+  box-shadow: 0px 0px 10px #000;
+
+}
+
+.btnCen{
+  text-align: center;
+  margin-top: 20px;
 }
 
 .btn{
-  width: 44%;
-  border:2px solid;
-  background-color: green;
-  color: white;
+  width: 45%;
   padding: 5px;
+  border-radius: 5px;
+  color: white;
   display: inline-block;
+  background-color:blue;
+  border:1px solid black;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 0 !important;
+  box-shadow: 0px 0px 10px #000;
 
 }
 
 
 .lineA{
-  width: 110px;
+  width: 100px;
   height: 0;
-  border: 1px solid #C4C4C4;
+  border: 1px solid #000;
+  margin: 3px;
+  margin-top: 20px;
+  display:inline-block;
+  margin-bottom: 5px;
+}
+
+.lineB{
+  width: 100px;
+  height: 0;
+  border: 1px solid #000;
   margin: 3px;
   display:inline-block;
   margin-bottom: 5px;
+}
+
+.g-signin2 > div{
+  transform: translate(50%, 30%); 
+  margin-bottom: 20px;
 }
