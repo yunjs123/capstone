@@ -14,7 +14,7 @@
 <body>
         <nav>
             <!--logo here-->
-            <h1 id="top">LogoHere</h1>
+            <a href="/"><img src="/static/logo.png" id="top"></a>
             <!--menu here-->
             <ul class="menu">
                 <li><a href="/">Home</a></li>
@@ -23,7 +23,7 @@
                 <li><a href="/map">Map</a></li>
             </ul>
             <form action="/map" method="POST">
-                <input type="text" name="search" id="search"></input>
+                <input type="text" name="search" id="search" placeholder="Which state do you live in?"></input>
                 <input type="submit">
             </form>
         </nav>

@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luckiest+Guy&family=Ropa+Sans&display=swap');
 .mapContainer{
     border-style:solid;
-    border-width: 15px;
-    border-color:white;
+    border-width: 2px;
+    border-color:whitesmoke;
     height: 570px;
+    background-color:aliceblue
 }
 .mapWrapper{
     transform: scale(.65);
@@ -25,9 +26,10 @@ nav{
     margin-top: 2%;
     margin-bottom: 2%;
 }
-nav #top{
+nav a #top{
     position:absolute;
-    left:1%;    
+    left:1%;
+    margin-top: -5%;    
 }
 nav #filler{
     position:absolute;
@@ -53,7 +55,7 @@ nav ul li a{
 }
 nav ul li a:hover{
     transition: all .2s ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.4);
 }
 
 body{
