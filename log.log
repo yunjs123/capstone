@@ -33,3 +33,269 @@
 2020-11-27 15:53:44,476 127.0.0.1 - - [27/Nov/2020 15:53:44] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
 2020-11-27 15:53:44,588 127.0.0.1 - - [27/Nov/2020 15:53:44] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
 2020-11-27 15:53:44,840 127.0.0.1 - - [27/Nov/2020 15:53:44] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:00:25,777  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-27 16:00:29,423 User: 127.0.0.1
+2020-11-27 16:00:29,432 127.0.0.1 - - [27/Nov/2020 16:00:29] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:00:29,971 127.0.0.1 - - [27/Nov/2020 16:00:29] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:00:31,656 User: 127.0.0.1
+2020-11-27 16:00:31,657 127.0.0.1 - - [27/Nov/2020 16:00:31] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:00:31,862 127.0.0.1 - - [27/Nov/2020 16:00:31] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:00:31,955 127.0.0.1 - - [27/Nov/2020 16:00:31] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:00:32,167 127.0.0.1 - - [27/Nov/2020 16:00:32] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:01:10,814 Exception on /map [POST]
+Traceback (most recent call last):
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 81, in convert_state
+    num = state_names.index(state)+3
+ValueError: 'adsfadf' is not in list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 47, in map
+    data = download(convert_state(state))
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 84, in convert_state
+    num = states.index(state.lower())+2
+ValueError: 'adsfadf' is not in list
+2020-11-27 16:01:10,842 127.0.0.1 - - [27/Nov/2020 16:01:10] "[35m[1mPOST /map HTTP/1.1[0m" 500 -
+2020-11-27 16:01:10,952 127.0.0.1 - - [27/Nov/2020 16:01:10] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:03:17,204 User: 127.0.0.1
+2020-11-27 16:03:17,205 127.0.0.1 - - [27/Nov/2020 16:03:17] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:03:17,231 127.0.0.1 - - [27/Nov/2020 16:03:17] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:03:17,358 127.0.0.1 - - [27/Nov/2020 16:03:17] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:03:17,799 127.0.0.1 - - [27/Nov/2020 16:03:17] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:03:28,263 Exception on /map [POST]
+Traceback (most recent call last):
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 81, in convert_state
+    num = state_names.index(state)+3
+ValueError: 'asdf' is not in list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 47, in map
+    data = download(convert_state(state))
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 84, in convert_state
+    num = states.index(state.lower())+2
+ValueError: 'asdf' is not in list
+2020-11-27 16:03:28,266 127.0.0.1 - - [27/Nov/2020 16:03:28] "[35m[1mPOST /map HTTP/1.1[0m" 500 -
+2020-11-27 16:03:28,371 127.0.0.1 - - [27/Nov/2020 16:03:28] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:04:17,017 User: 127.0.0.1
+2020-11-27 16:04:17,018 127.0.0.1 - - [27/Nov/2020 16:04:17] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:04:17,047 127.0.0.1 - - [27/Nov/2020 16:04:17] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:04:17,178 127.0.0.1 - - [27/Nov/2020 16:04:17] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:04:17,612 127.0.0.1 - - [27/Nov/2020 16:04:17] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:04:23,065 User: 127.0.0.1
+2020-11-27 16:04:23,066 127.0.0.1 - - [27/Nov/2020 16:04:23] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:04:52,943 User: 127.0.0.1
+2020-11-27 16:04:52,947 127.0.0.1 - - [27/Nov/2020 16:04:52] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:04:52,977 127.0.0.1 - - [27/Nov/2020 16:04:52] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:04:53,466 127.0.0.1 - - [27/Nov/2020 16:04:53] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:04:53,857 127.0.0.1 - - [27/Nov/2020 16:04:53] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:04:57,726 User: 127.0.0.1
+2020-11-27 16:04:57,726 127.0.0.1 - - [27/Nov/2020 16:04:57] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:05:11,620 User: 127.0.0.1
+2020-11-27 16:05:11,621 127.0.0.1 - - [27/Nov/2020 16:05:11] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:05:11,651 127.0.0.1 - - [27/Nov/2020 16:05:11] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:05:11,776 127.0.0.1 - - [27/Nov/2020 16:05:11] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:05:12,141 127.0.0.1 - - [27/Nov/2020 16:05:12] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:05:13,805 User: 127.0.0.1
+2020-11-27 16:05:13,807 127.0.0.1 - - [27/Nov/2020 16:05:13] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:05:31,082  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-27 16:05:39,268 User: 127.0.0.1
+2020-11-27 16:05:39,282 127.0.0.1 - - [27/Nov/2020 16:05:39] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:05:50,420 Exception on /map [POST]
+Traceback (most recent call last):
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 47, in map
+    data = download(convert_state(state))
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 79, in convert_state
+    state = state.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2020-11-27 16:05:50,424 127.0.0.1 - - [27/Nov/2020 16:05:50] "[35m[1mPOST /map HTTP/1.1[0m" 500 -
+2020-11-27 16:05:50,479 127.0.0.1 - - [27/Nov/2020 16:05:50] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:06:14,694 Exception on /map [POST]
+Traceback (most recent call last):
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 47, in map
+    data = download(convert_state(state))
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 79, in convert_state
+    state = state.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2020-11-27 16:06:14,697 127.0.0.1 - - [27/Nov/2020 16:06:14] "[35m[1mPOST /map HTTP/1.1[0m" 500 -
+2020-11-27 16:06:14,750 127.0.0.1 - - [27/Nov/2020 16:06:14] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:06:21,012 Exception on /map [POST]
+Traceback (most recent call last):
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 47, in map
+    data = download(convert_state(state))
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 79, in convert_state
+    state = state.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2020-11-27 16:06:21,014 127.0.0.1 - - [27/Nov/2020 16:06:21] "[35m[1mPOST /map HTTP/1.1[0m" 500 -
+2020-11-27 16:06:21,085 127.0.0.1 - - [27/Nov/2020 16:06:21] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:06:37,277 User: 127.0.0.1
+2020-11-27 16:06:37,278 127.0.0.1 - - [27/Nov/2020 16:06:37] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:06:38,522 User: 127.0.0.1
+2020-11-27 16:06:38,523 127.0.0.1 - - [27/Nov/2020 16:06:38] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:06:39,703 User: 127.0.0.1
+2020-11-27 16:06:39,704 127.0.0.1 - - [27/Nov/2020 16:06:39] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:06:39,898 127.0.0.1 - - [27/Nov/2020 16:06:39] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:06:39,989 127.0.0.1 - - [27/Nov/2020 16:06:39] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:06:40,335 127.0.0.1 - - [27/Nov/2020 16:06:40] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:06:43,431 Exception on /map [POST]
+Traceback (most recent call last):
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 47, in map
+    data = download(convert_state(state))
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 79, in convert_state
+    state = state.lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+2020-11-27 16:06:43,435 127.0.0.1 - - [27/Nov/2020 16:06:43] "[35m[1mPOST /map HTTP/1.1[0m" 500 -
+2020-11-27 16:06:43,489 127.0.0.1 - - [27/Nov/2020 16:06:43] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:08:53,080 User: 127.0.0.1
+2020-11-27 16:08:53,082 127.0.0.1 - - [27/Nov/2020 16:08:53] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:08:53,106 127.0.0.1 - - [27/Nov/2020 16:08:53] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:08:53,229 127.0.0.1 - - [27/Nov/2020 16:08:53] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:08:53,773 127.0.0.1 - - [27/Nov/2020 16:08:53] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:08:58,922  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-27 16:09:00,740 User: 127.0.0.1
+2020-11-27 16:09:00,749 127.0.0.1 - - [27/Nov/2020 16:09:00] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:09:06,267 User: 127.0.0.1
+2020-11-27 16:09:06,268 127.0.0.1 - - [27/Nov/2020 16:09:06] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:09:06,466 127.0.0.1 - - [27/Nov/2020 16:09:06] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:09:06,560 127.0.0.1 - - [27/Nov/2020 16:09:06] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:09:06,734 127.0.0.1 - - [27/Nov/2020 16:09:06] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:09:31,614 User: 127.0.0.1
+2020-11-27 16:09:31,615 127.0.0.1 - - [27/Nov/2020 16:09:31] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:09:31,639 127.0.0.1 - - [27/Nov/2020 16:09:31] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:09:40,618  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-27 16:09:41,887 127.0.0.1 - - [27/Nov/2020 16:09:41] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:09:42,003 127.0.0.1 - - [27/Nov/2020 16:09:42] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:09:45,410 127.0.0.1 - - [27/Nov/2020 16:09:45] "[37mPOST /map HTTP/1.1[0m" 200 -
+2020-11-27 16:09:45,533 127.0.0.1 - - [27/Nov/2020 16:09:45] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:09:52,567 User: 127.0.0.1
+2020-11-27 16:09:52,574 127.0.0.1 - - [27/Nov/2020 16:09:52] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:09:53,564 User: 127.0.0.1
+2020-11-27 16:09:53,565 127.0.0.1 - - [27/Nov/2020 16:09:53] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:09:53,601 127.0.0.1 - - [27/Nov/2020 16:09:53] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:09:53,653 127.0.0.1 - - [27/Nov/2020 16:09:53] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:09:53,769 127.0.0.1 - - [27/Nov/2020 16:09:53] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:10:00,185 User: 127.0.0.1
+2020-11-27 16:10:00,185 127.0.0.1 - - [27/Nov/2020 16:10:00] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:10:07,196  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-27 16:10:10,312 User: 127.0.0.1
+2020-11-27 16:10:10,317 127.0.0.1 - - [27/Nov/2020 16:10:10] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:10:11,745 User: 127.0.0.1
+2020-11-27 16:10:11,746 127.0.0.1 - - [27/Nov/2020 16:10:11] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:10:13,468 User: 127.0.0.1
+2020-11-27 16:10:13,469 127.0.0.1 - - [27/Nov/2020 16:10:13] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:10:13,626 User: 127.0.0.1
+2020-11-27 16:10:13,626 127.0.0.1 - - [27/Nov/2020 16:10:13] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:10:13,745 127.0.0.1 - - [27/Nov/2020 16:10:13] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:10:13,864 127.0.0.1 - - [27/Nov/2020 16:10:13] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:10:13,890 127.0.0.1 - - [27/Nov/2020 16:10:13] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:10:13,911 127.0.0.1 - - [27/Nov/2020 16:10:13] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:10:21,057 User: 127.0.0.1
+2020-11-27 16:10:21,058 127.0.0.1 - - [27/Nov/2020 16:10:21] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:18:00,423  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-27 16:18:02,483 User: 127.0.0.1
+2020-11-27 16:18:02,492 127.0.0.1 - - [27/Nov/2020 16:18:02] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:18:02,693 127.0.0.1 - - [27/Nov/2020 16:18:02] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:18:03,097 127.0.0.1 - - [27/Nov/2020 16:18:03] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:18:03,362 127.0.0.1 - - [27/Nov/2020 16:18:03] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:18:18,793 Exception on /map [POST]
+Traceback (most recent call last):
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 81, in convert_state
+    num = state_names.index(state)+3
+ValueError: 'asdsad' is not in list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 47, in map
+    data = download(convert_state(state))
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 84, in convert_state
+    num = states.index(state.lower())+2
+ValueError: 'asdsad' is not in list
+2020-11-27 16:18:18,796 127.0.0.1 - - [27/Nov/2020 16:18:18] "[35m[1mPOST /map HTTP/1.1[0m" 500 -
+2020-11-27 16:18:18,879 127.0.0.1 - - [27/Nov/2020 16:18:18] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
