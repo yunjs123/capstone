@@ -299,3 +299,230 @@ Traceback (most recent call last):
 ValueError: 'asdsad' is not in list
 2020-11-27 16:18:18,796 127.0.0.1 - - [27/Nov/2020 16:18:18] "[35m[1mPOST /map HTTP/1.1[0m" 500 -
 2020-11-27 16:18:18,879 127.0.0.1 - - [27/Nov/2020 16:18:18] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:19:26,486  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-27 16:19:29,999 User: 127.0.0.1
+2020-11-27 16:19:30,013 127.0.0.1 - - [27/Nov/2020 16:19:30] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:19:30,214 127.0.0.1 - - [27/Nov/2020 16:19:30] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:19:30,529 127.0.0.1 - - [27/Nov/2020 16:19:30] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:19:30,786 127.0.0.1 - - [27/Nov/2020 16:19:30] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:19:34,144 Exception on /map [POST]
+Traceback (most recent call last):
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 81, in convert_state
+    num = state_names.index(state)+3
+ValueError: 'asdf' is not in list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 47, in map
+    data = download(convert_state(state))
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 84, in convert_state
+    num = states.index(state.lower())+2
+ValueError: 'asdf' is not in list
+2020-11-27 16:19:34,147 127.0.0.1 - - [27/Nov/2020 16:19:34] "[35m[1mPOST /map HTTP/1.1[0m" 500 -
+2020-11-27 16:19:34,219 127.0.0.1 - - [27/Nov/2020 16:19:34] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:20:58,714 User: 127.0.0.1
+2020-11-27 16:20:58,715 127.0.0.1 - - [27/Nov/2020 16:20:58] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:20:58,753 127.0.0.1 - - [27/Nov/2020 16:20:58] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:20:58,865 127.0.0.1 - - [27/Nov/2020 16:20:58] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:20:59,071 127.0.0.1 - - [27/Nov/2020 16:20:59] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:21:03,586 Exception on /map [POST]
+Traceback (most recent call last):
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 81, in convert_state
+    num = state_names.index(state)+3
+ValueError: 'asdfasdf' is not in list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jaese\desktop\myproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 47, in map
+    data = download(convert_state(state))
+  File "C:\Users\jaese\Desktop\capstone\app\routes.py", line 84, in convert_state
+    num = states.index(state.lower())+2
+ValueError: 'asdfasdf' is not in list
+2020-11-27 16:21:03,589 127.0.0.1 - - [27/Nov/2020 16:21:03] "[35m[1mPOST /map HTTP/1.1[0m" 500 -
+2020-11-27 16:21:03,662 127.0.0.1 - - [27/Nov/2020 16:21:03] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:21:32,084 127.0.0.1 - - [27/Nov/2020 16:21:32] "[37mGET /about HTTP/1.1[0m" 200 -
+2020-11-27 16:21:32,184 127.0.0.1 - - [27/Nov/2020 16:21:32] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:21:40,054 127.0.0.1 - - [27/Nov/2020 16:21:40] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:21:40,151 127.0.0.1 - - [27/Nov/2020 16:21:40] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:21:43,471 127.0.0.1 - - [27/Nov/2020 16:21:43] "[37mGET /login HTTP/1.1[0m" 200 -
+2020-11-27 16:21:43,496 127.0.0.1 - - [27/Nov/2020 16:21:43] "[33mGET /GoogleLogin.js HTTP/1.1[0m" 404 -
+2020-11-27 16:21:43,838 127.0.0.1 - - [27/Nov/2020 16:21:43] "[33mGET /GoogleLogin.js HTTP/1.1[0m" 404 -
+2020-11-27 16:21:44,337 127.0.0.1 - - [27/Nov/2020 16:21:44] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:21:51,390 127.0.0.1 - - [27/Nov/2020 16:21:51] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:21:59,598 User: 127.0.0.1
+2020-11-27 16:21:59,600 127.0.0.1 - - [27/Nov/2020 16:21:59] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:22:01,616 127.0.0.1 - - [27/Nov/2020 16:22:01] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:22:01,711 127.0.0.1 - - [27/Nov/2020 16:22:01] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:22:03,748 User: 127.0.0.1
+2020-11-27 16:22:03,749 127.0.0.1 - - [27/Nov/2020 16:22:03] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:22:05,672 127.0.0.1 - - [27/Nov/2020 16:22:05] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:22:05,766 127.0.0.1 - - [27/Nov/2020 16:22:05] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:22:10,397 User: 127.0.0.1
+2020-11-27 16:22:10,398 127.0.0.1 - - [27/Nov/2020 16:22:10] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:22:12,363 127.0.0.1 - - [27/Nov/2020 16:22:12] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:22:12,455 127.0.0.1 - - [27/Nov/2020 16:22:12] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:22:14,011 User: 127.0.0.1
+2020-11-27 16:22:14,013 127.0.0.1 - - [27/Nov/2020 16:22:14] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:22:18,858 127.0.0.1 - - [27/Nov/2020 16:22:18] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:22:18,961 127.0.0.1 - - [27/Nov/2020 16:22:18] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:22:20,928 User: 127.0.0.1
+2020-11-27 16:22:20,929 127.0.0.1 - - [27/Nov/2020 16:22:20] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:22:41,273 127.0.0.1 - - [27/Nov/2020 16:22:41] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:22:41,383 127.0.0.1 - - [27/Nov/2020 16:22:41] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:22:43,279 User: 127.0.0.1
+2020-11-27 16:22:43,280 127.0.0.1 - - [27/Nov/2020 16:22:43] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:22:58,591  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-27 16:23:00,788 User: 127.0.0.1
+2020-11-27 16:23:00,810 127.0.0.1 - - [27/Nov/2020 16:23:00] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:23:03,339 127.0.0.1 - - [27/Nov/2020 16:23:03] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:23:03,438 127.0.0.1 - - [27/Nov/2020 16:23:03] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:23:26,907 User: 127.0.0.1
+2020-11-27 16:23:26,907 127.0.0.1 - - [27/Nov/2020 16:23:26] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:23:28,288 127.0.0.1 - - [27/Nov/2020 16:23:28] "[37mGET /about HTTP/1.1[0m" 200 -
+2020-11-27 16:23:28,364 127.0.0.1 - - [27/Nov/2020 16:23:28] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:23:31,451 127.0.0.1 - - [27/Nov/2020 16:23:31] "[37mGET /login HTTP/1.1[0m" 200 -
+2020-11-27 16:23:31,479 127.0.0.1 - - [27/Nov/2020 16:23:31] "[33mGET /GoogleLogin.js HTTP/1.1[0m" 404 -
+2020-11-27 16:23:31,999 127.0.0.1 - - [27/Nov/2020 16:23:31] "[33mGET /GoogleLogin.js HTTP/1.1[0m" 404 -
+2020-11-27 16:23:32,312 127.0.0.1 - - [27/Nov/2020 16:23:32] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:23:34,280 127.0.0.1 - - [27/Nov/2020 16:23:34] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:23:34,379 127.0.0.1 - - [27/Nov/2020 16:23:34] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:23:36,134 User: 127.0.0.1
+2020-11-27 16:23:36,138 127.0.0.1 - - [27/Nov/2020 16:23:36] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:23:40,482 127.0.0.1 - - [27/Nov/2020 16:23:40] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:23:40,570 127.0.0.1 - - [27/Nov/2020 16:23:40] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:23:41,439 User: 127.0.0.1
+2020-11-27 16:23:41,441 127.0.0.1 - - [27/Nov/2020 16:23:41] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:26:57,596 User: 127.0.0.1
+2020-11-27 16:26:57,597 127.0.0.1 - - [27/Nov/2020 16:26:57] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:26:57,824 127.0.0.1 - - [27/Nov/2020 16:26:57] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:26:58,410 127.0.0.1 - - [27/Nov/2020 16:26:58] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:26:58,772 127.0.0.1 - - [27/Nov/2020 16:26:58] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:27:44,190 User: 127.0.0.1
+2020-11-27 16:27:44,192 127.0.0.1 - - [27/Nov/2020 16:27:44] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:27:44,237 127.0.0.1 - - [27/Nov/2020 16:27:44] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:27:44,387 127.0.0.1 - - [27/Nov/2020 16:27:44] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:27:44,689 127.0.0.1 - - [27/Nov/2020 16:27:44] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:27:50,154 User: 127.0.0.1
+2020-11-27 16:27:50,155 127.0.0.1 - - [27/Nov/2020 16:27:50] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:27:50,186 127.0.0.1 - - [27/Nov/2020 16:27:50] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:27:50,306 127.0.0.1 - - [27/Nov/2020 16:27:50] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:27:50,653 127.0.0.1 - - [27/Nov/2020 16:27:50] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:28:04,588 User: 127.0.0.1
+2020-11-27 16:28:04,589 127.0.0.1 - - [27/Nov/2020 16:28:04] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:28:04,634 127.0.0.1 - - [27/Nov/2020 16:28:04] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:28:04,759 127.0.0.1 - - [27/Nov/2020 16:28:04] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:28:05,070 127.0.0.1 - - [27/Nov/2020 16:28:05] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:28:21,001 User: 127.0.0.1
+2020-11-27 16:28:21,002 127.0.0.1 - - [27/Nov/2020 16:28:21] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:28:21,043 127.0.0.1 - - [27/Nov/2020 16:28:21] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:28:21,158 127.0.0.1 - - [27/Nov/2020 16:28:21] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:28:21,458 127.0.0.1 - - [27/Nov/2020 16:28:21] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:28:32,967 User: 127.0.0.1
+2020-11-27 16:28:32,969 127.0.0.1 - - [27/Nov/2020 16:28:32] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:28:32,997 127.0.0.1 - - [27/Nov/2020 16:28:32] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:28:33,124 127.0.0.1 - - [27/Nov/2020 16:28:33] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:28:33,254 127.0.0.1 - - [27/Nov/2020 16:28:33] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:28:48,508 User: 127.0.0.1
+2020-11-27 16:28:48,509 127.0.0.1 - - [27/Nov/2020 16:28:48] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:28:48,551 127.0.0.1 - - [27/Nov/2020 16:28:48] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:28:48,680 127.0.0.1 - - [27/Nov/2020 16:28:48] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:28:48,869 127.0.0.1 - - [27/Nov/2020 16:28:48] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:28:54,411 User: 127.0.0.1
+2020-11-27 16:28:54,412 127.0.0.1 - - [27/Nov/2020 16:28:54] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:28:54,458 127.0.0.1 - - [27/Nov/2020 16:28:54] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:28:54,597 127.0.0.1 - - [27/Nov/2020 16:28:54] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:28:54,967 127.0.0.1 - - [27/Nov/2020 16:28:54] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:29:01,165 User: 127.0.0.1
+2020-11-27 16:29:01,166 127.0.0.1 - - [27/Nov/2020 16:29:01] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:29:01,198 127.0.0.1 - - [27/Nov/2020 16:29:01] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:29:01,345 127.0.0.1 - - [27/Nov/2020 16:29:01] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:29:01,551 127.0.0.1 - - [27/Nov/2020 16:29:01] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:29:07,713 127.0.0.1 - - [27/Nov/2020 16:29:07] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:29:07,869 127.0.0.1 - - [27/Nov/2020 16:29:07] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:29:19,567 User: 127.0.0.1
+2020-11-27 16:29:19,568 127.0.0.1 - - [27/Nov/2020 16:29:19] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:29:23,082 127.0.0.1 - - [27/Nov/2020 16:29:23] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:29:23,212 127.0.0.1 - - [27/Nov/2020 16:29:23] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:29:24,275 User: 127.0.0.1
+2020-11-27 16:29:24,276 127.0.0.1 - - [27/Nov/2020 16:29:24] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:29:47,896 User: 127.0.0.1
+2020-11-27 16:29:47,896 127.0.0.1 - - [27/Nov/2020 16:29:47] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:29:47,931 127.0.0.1 - - [27/Nov/2020 16:29:47] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:29:48,064 127.0.0.1 - - [27/Nov/2020 16:29:48] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:29:48,251 127.0.0.1 - - [27/Nov/2020 16:29:48] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:29:49,315 127.0.0.1 - - [27/Nov/2020 16:29:49] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:29:49,458 127.0.0.1 - - [27/Nov/2020 16:29:49] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:29:51,958 127.0.0.1 - - [27/Nov/2020 16:29:51] "[37mGET /chart HTTP/1.1[0m" 200 -
+2020-11-27 16:29:52,107 127.0.0.1 - - [27/Nov/2020 16:29:52] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:29:58,184  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-27 16:30:00,686 127.0.0.1 - - [27/Nov/2020 16:30:00] "[37mGET /chart HTTP/1.1[0m" 200 -
+2020-11-27 16:30:01,035 127.0.0.1 - - [27/Nov/2020 16:30:01] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:31:15,277  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2020-11-27 16:31:16,878 127.0.0.1 - - [27/Nov/2020 16:31:16] "[37mGET /chart HTTP/1.1[0m" 200 -
+2020-11-27 16:31:17,218 127.0.0.1 - - [27/Nov/2020 16:31:17] "[37mGET /static/jquery.js HTTP/1.1[0m" 200 -
+2020-11-27 16:31:17,219 127.0.0.1 - - [27/Nov/2020 16:31:17] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:31:17,458 127.0.0.1 - - [27/Nov/2020 16:31:17] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:31:17,762 127.0.0.1 - - [27/Nov/2020 16:31:17] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:31:39,175 127.0.0.1 - - [27/Nov/2020 16:31:39] "[37mGET /chart HTTP/1.1[0m" 200 -
+2020-11-27 16:31:39,210 127.0.0.1 - - [27/Nov/2020 16:31:39] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:31:39,214 127.0.0.1 - - [27/Nov/2020 16:31:39] "[37mGET /static/jquery.js HTTP/1.1[0m" 200 -
+2020-11-27 16:31:39,334 127.0.0.1 - - [27/Nov/2020 16:31:39] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:31:39,642 127.0.0.1 - - [27/Nov/2020 16:31:39] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:32:59,217 127.0.0.1 - - [27/Nov/2020 16:32:59] "[37mGET /chart HTTP/1.1[0m" 200 -
+2020-11-27 16:32:59,270 127.0.0.1 - - [27/Nov/2020 16:32:59] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:32:59,271 127.0.0.1 - - [27/Nov/2020 16:32:59] "[37mGET /static/jquery.js HTTP/1.1[0m" 200 -
+2020-11-27 16:32:59,701 127.0.0.1 - - [27/Nov/2020 16:32:59] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:33:00,011 127.0.0.1 - - [27/Nov/2020 16:33:00] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:33:35,738 127.0.0.1 - - [27/Nov/2020 16:33:35] "[37mGET /chart HTTP/1.1[0m" 200 -
+2020-11-27 16:33:35,773 127.0.0.1 - - [27/Nov/2020 16:33:35] "[37mGET /static/jquery.js HTTP/1.1[0m" 200 -
+2020-11-27 16:33:35,784 127.0.0.1 - - [27/Nov/2020 16:33:35] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:33:35,912 127.0.0.1 - - [27/Nov/2020 16:33:35] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:33:36,243 127.0.0.1 - - [27/Nov/2020 16:33:36] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:38:43,106 127.0.0.1 - - [27/Nov/2020 16:38:43] "[37mGET /about HTTP/1.1[0m" 200 -
+2020-11-27 16:38:43,208 127.0.0.1 - - [27/Nov/2020 16:38:43] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:38:50,963 127.0.0.1 - - [27/Nov/2020 16:38:50] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:38:52,854 User: 127.0.0.1
+2020-11-27 16:38:52,860 127.0.0.1 - - [27/Nov/2020 16:38:52] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:38:53,612 127.0.0.1 - - [27/Nov/2020 16:38:53] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 16:47:11,751 User: 127.0.0.1
+2020-11-27 16:47:11,752 127.0.0.1 - - [27/Nov/2020 16:47:11] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:47:12,565 User: 127.0.0.1
+2020-11-27 16:47:12,566 127.0.0.1 - - [27/Nov/2020 16:47:12] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 16:47:30,694 127.0.0.1 - - [27/Nov/2020 16:47:30] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:47:30,850 127.0.0.1 - - [27/Nov/2020 16:47:30] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 16:58:07,514 127.0.0.1 - - [27/Nov/2020 16:58:07] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 16:58:07,550 127.0.0.1 - - [27/Nov/2020 16:58:07] "[37mGET /static/jquery.js HTTP/1.1[0m" 200 -
+2020-11-27 16:58:07,563 127.0.0.1 - - [27/Nov/2020 16:58:07] "[37mGET /static/styles/style.css HTTP/1.1[0m" 200 -
+2020-11-27 16:58:08,023 127.0.0.1 - - [27/Nov/2020 16:58:08] "[37mGET /static/background.jpg HTTP/1.1[0m" 200 -
+2020-11-27 16:58:08,246 127.0.0.1 - - [27/Nov/2020 16:58:08] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -
+2020-11-27 17:05:32,364 User: 127.0.0.1
+2020-11-27 17:05:32,365 127.0.0.1 - - [27/Nov/2020 17:05:32] "[37mGET / HTTP/1.1[0m" 200 -
+2020-11-27 17:05:32,877 127.0.0.1 - - [27/Nov/2020 17:05:32] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2020-11-27 17:05:43,637 127.0.0.1 - - [27/Nov/2020 17:05:43] "[37mGET /map HTTP/1.1[0m" 200 -
+2020-11-27 17:05:43,756 127.0.0.1 - - [27/Nov/2020 17:05:43] "[37mGET /favicon.ico HTTP/1.1[0m" 200 -

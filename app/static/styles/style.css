@@ -20,17 +20,30 @@ ul{
 nav{
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 1;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 nav #top{
-    position: absolute;
-    left: 2%;
+    position:absolute;
+    left:1%;    
+}
+nav #filler{
+    position:absolute;
+    left:80%;
+}
+nav form{
+    position:absolute;
+    left:80%;
 }
 nav ul{
     display:flex;
-    margin:0%;
+    justify-content: center;
+    position:absolute;
+    left:37%;
     padding:0%;
+    text-align:center;
 }
 nav ul li a{
     display:flex;
