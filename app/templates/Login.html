@@ -16,6 +16,9 @@ client ID
 <meta name="google-signin-client_id" content=gapi.auth2.init()>
 
 For testing purposes, type into address bar the following: localhost5500/Login.html
+
+        <link rel="stylesheet" href="login.css">
+
 -->
 
 <!Doctype html>
@@ -25,6 +28,7 @@ For testing purposes, type into address bar the following: localhost5500/Login.h
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/login.css') }}">
 
         <title>Google Login demo</title>
         
@@ -46,7 +50,26 @@ For testing purposes, type into address bar the following: localhost5500/Login.h
     </head>
 
     <body>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div class="dbody">
+            <h1>Login</h1>
+            <div class="inputCen">
+                <input id="testinput" type="email" placeholder="Email">
+                <input id="testinput" type="password" placeholder="Password">
+            </div>
+            <div class="btnCen">
+                <input class="btn" type="button" name="btn" value="Login">
+                <div class="cSent">
+                    <a href="#">Sign up</a> for an account
+                </div>
+                <div class="lineA"></div>
+
+                <div style="display:inline-block;">OR</div>
+                <div class="lineB"></div>
+                <div class="gDiv">
+                    <div class="g-signin2" data-width="125" data-height="30" data-onsuccess="onSignIn"></div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
 
@@ -57,5 +80,6 @@ For testing purposes, type into address bar the following: localhost5500/Login.h
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        
 }
 </script>

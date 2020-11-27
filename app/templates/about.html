@@ -10,81 +10,50 @@
         <link rel="stylesheet" href="{{ url_for('static',filename='styles/about.css') }}">
     </head>
 
-<!--
-    <body>
-    <div class="contact-box">
-    <form>
-        <input type="text" class="input-field" placeholder="First Name">
-        <input type="text" class="input-field" placeholder="Last Name">
-        <input type="text" class="input-field" placeholder="Company">
-        <input type="text" class="input-field" placeholder="Street">
-        <input type="text" class="input-field" placeholder="#">
-        <input type="text" class="input-field" placeholder="Postal">
-        <input type="email" class="input-field" placeholder="Email">
-        <input type="text" class="input-field" placeholder="Phone">
-        <input type="text" class="input-field" placeholder="Subject">
-        <textarea type="text" class="input-field textarea-field" placeholder="Type Message"></textarea>
-        <button type="button" class="btn">Submit</button>
-    </form>
-</div>
-</body>
--->
-
-<div id="calltoaction-form" class="teaser-form">
-    <!-- <div class="form-title">
-      <h3>sample form</h3>
-    </div>
-    <form id="contact_form" action="_contact-us.php" method="post">
-    <div class="form-header"> <h4>Personal details</h4> </div>
-      <div class="form-section">
-        <input id="name" name="name" type="text" placeholder="First Name">
-      </div>
-      <div class="form-section">
-        <input id="name" name="name" type="text" placeholder="Last Name">
-      </div>
-      <div class="form-section">
-        <input id="name" name="name" type="text" placeholder="Company">
-      </div>
-      <div class="form-section">
-        <input id="name" name="name" type="text" placeholder="Street">
-      </div>
-      <div class="form-section">
-        <input id="name" name="name" type="text" placeholder="City">
-      </div>
-      <div class="form-section">
-        <input id="name" name="name" type="text" placeholder="Postal">
-      </div>
-      <div class="form-section">
-        <input id="email" name="email" type="text" placeholder="Email">
-      </div>
-      <div class="form-section">
-        <input id="name" name="name" type="text" placeholder="Phone">
-      </div>
-      <div class="form-section">
-      <textarea type="text" class="textarea-field" placeholder="Type Message"></textarea>
-        </div>
-    </form>
-
-      <button type="button" class="btn">Submit</button>
-  -->
-
-
-
 <body>
+  <nav>
+    <!--logo here-->
+    <h1 id="top">LogoHere</h1>
+    <!--menu here-->
+    <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/login">Sign in</a></li>
+        <li><a href="/chart">Chart</a></li>
+    </ul>
+</nav>
+
   <h1>About Us</h1>
   <h2>The Project</h2>
-  AtmoDust is a senior design project done by 3 UNCC Undergraduates in The College of Computing and Informatics. Our goal was to make a website
-  that enables users to check air quality from their nearest air sampling location. We use a free public API provided by the EPA to 
-  deliever air quality information to users in an informative and easy to understand way.
+  AtmoDust is a senior design project done by 3 UNCC Undergraduates in The College of Computing and Informatics. <br>
+  Our goal was to make a website that enables users to check air quality from their nearest air sampling location.<br>
+  We use a free public API provided by the EPA to deliever air quality information to users in an informative and easy to understand way.
   <h2>Students</h2>
-  Jay Strahler
-  Vue Vang
+  Jay Strahler, 
+  Vue Vang, 
   JaeSeong Yun
   <h2>Acknowledgements</h2>
-  We would like to thank the EPA for providing the information publically and free.
-  A special thanks goes to UNCC and the College of Computing and Informatics
-</body>
+  We would like to thank the EPA for providing the information publically and free.<br>
+  A special thanks goes to UNCC and the College of Computing and Informatics.
 
+  <h1>Contact Us</h1>
+
+
+<form>
+
+  <div>
+    <input id="setBorder" name="fname"  type="text" placeholder="First Name"/><br>
+    <input id="setBorder" name="lname"  type="text" placeholder="Last Name"/><br>
+    <input id="setBorder" name="email"  type="email" placeholder="Email"/><br>
+    <textarea id="messageBox" name="messageBox" type="textarea" placeholder="Type Message Here"></textarea><br>
+    <input id="submitButton" type="submit" value="Submit">
+
+  </div>
+
+</form>
+
+
+</body>
 
 
 </html>

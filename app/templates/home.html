@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <script src="https://kit.fontawesome.com/ef6f3d99fc.js" crossorigin="anonymous"></script>
     <title>Home</title>
+
+    
 </head>
 
 <body>
@@ -30,11 +32,13 @@
     <h1 class="welcome"> AtmoDust</h1>
     <h2>SOME DESCRIPTION OF OUR SITE</h2>
         <div class="search_box">
-            <form action="/map" method="POST"></form>
+            <form action="/map" method="POST">
                 <input class="search_text" type="text" name="search" id="search" placeholder="Which state do you live in?"></input>
-                <button type="submit" class="search_button" href='/chart'>
+                <button type="submit" formmethod="post" class="search_button" href='/chart'>
                     <i class="fas fa-search"></i>
             </form>
         </div>
+
 </body>
+
 </html>

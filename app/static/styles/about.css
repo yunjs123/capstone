@@ -1,79 +1,26 @@
-*
+h1 {
+    text-align: center;
+  }
 
-/*
-{
-    margin:0;
-    padding:0
+body {
+    text-align: center;
 }
 
-body
-{
-    background-color: #efefef;
-    font-family: sans-serif;
+title {
+    width:300px;   
 }
 
-.contact-box
-{
-    width: 500px;
-    background-color: #fff;
-    box-shadow: 0 0 20px 0 #999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
 
+input[type=text]:focus{
+    outline: 2px solid #1295ff;   
 }
 
-form
-{
-    margin: 35px;
-
+input[type=email]:focus{
+    outline: 2px solid #1295ff;    
 }
 
-.input-field
-{
-    width: 400px;
-    height: 40px;
-    margin-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 1px solid #777;
-    border-radius: 14px;
-    outline: none;
-}
-
-.textarea-field
-{
-    height: 150px;
-    padding-top: 10px;
-}
-
-.btn
-{
-    border-radius: 20px;
-    color: #fff;
-    margin-top: 10px;
-    padding:10px;
-    background-color: #47c35a;
-    font-size: 12px;
-    border: none;
-    cursor: pointer;
-}
-
-.boxRight
-{
-    display: in;
-}
-
-*/
-
-
-
-.teaser-right {
-	float: right;
-	width: 150%;
-    margin: 3% 0 0 0
-    
+textarea[type=textarea]:focus{
+    outline: 2px solid #1295ff;    
 }
 
 #calltoaction-form {
@@ -89,31 +36,36 @@ form
 }
     
 
-.form-section {
-  display: inline-block;
-  margin-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  
+#setBorder{
+    font-size: 24;
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
 }
 
-.btn
-{
-    display: inline-block;
-  margin-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+textarea{
+    resize: none;
+    width: 50%;
+    height: 200px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing:border-box;
+    margin-bottom:15px;
 }
 
-.textarea-field
-{
-    display: inline-block;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 150px;
-}
-
-body {
-    text-align: center;
+#submitButton {
+    margin: 10px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100px;
+    margin-bottom: 10px;
 }
