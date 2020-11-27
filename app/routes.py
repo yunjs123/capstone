@@ -63,6 +63,8 @@ def map():
         data_collected.append(daily_data[4448][5])
         data_collected.append(daily_data[4448][6])
         data_collected.append(daily_data[4448][7])
+
+        data_collected.append(daily_data[4448][0])
         #4454
         return render_template("chart.html", data=data_collected)
     return render_template("chart.html", data='')
@@ -79,9 +81,10 @@ def convert_state(state):
     state = state.lower()
     try:
         num = state_names.index(state)+3
-    except:
         if num == 0:
             num = states.index(state.lower())+2
+    except:
+        num = 0
     
     return num
 
