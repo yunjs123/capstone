@@ -22,13 +22,14 @@
                 <li><a href="/login">Sign in</a></li>
                 <li><a href="/map">Map</a></li>
             </ul>
-            <form action="/map" method="POST" id="search-other">
-                <input type="text" name="search" id="search" placeholder="Which state do you live in?"></input>
+            <form action="/map" method="POST" class="searching">
+                <input type="text" name="search" class="search-other" placeholder="Which state do you live in?"></input>
                 <input type="submit" class="btn-grad">
             </form>
         </nav>
     
     <div class="mapContainer">
+        <div class="square"></div>
     <div class="mapWrapper">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1100 800">
             <defs>
