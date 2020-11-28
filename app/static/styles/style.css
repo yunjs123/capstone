@@ -4,7 +4,8 @@
     border-width: 2px;
     border-color:whitesmoke;
     height: 570px;
-    background-color:aliceblue
+    background-color:aliceblue;
+    margin-top: 4%;
 }
 .mapWrapper{
     transform: scale(.65);
@@ -24,9 +25,9 @@
 }
 #illustration{
     position: absolute;
-    height:480px;
-    left:48%;
-    bottom: 5%;
+    height:200px;
+    left:55%;
+    bottom: 40%;
 }
 g :hover{
     fill:blue;
@@ -76,10 +77,7 @@ nav ul li a:hover{
 
 body{
     /*background-image:url("/static/background.jpg");*/
-    /*background-color: #b8c6db;
-    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);*/
-    background-color: #dbcbd8;
-    background-image: linear-gradient(316deg, #dbcbd8 0%, #2e4057 74%);
+    background: #e3f4ff;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
