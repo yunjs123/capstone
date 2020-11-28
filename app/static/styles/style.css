@@ -24,9 +24,9 @@
 }
 #illustration{
     position: absolute;
-    height:400px;
-    left:52%;
-    bottom: 1%;
+    height:500px;
+    left:45%;
+    bottom: 5%;
 }
 g :hover{
     fill:blue;
