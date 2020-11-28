@@ -12,6 +12,22 @@
     margin-top:-12.5%;
     
 }
+#home-wrapper{
+    position:absolute;
+    z-index:7;
+    box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    top:7%;
+    height:540px;
+    right: 5%;
+    left: 5%;
+}
+#illustration{
+    position: absolute;
+    height:400px;
+    left:52%;
+    bottom: 1%;
+}
 g :hover{
     fill:blue;
 }
@@ -93,7 +109,7 @@ body h2{
 .search_box{
     position: absolute;
     left: 50%;
-    top: 500px;
+    top: auto;
     transform: translate(-50%, -50%);
     background: #2f3640;
     height: 40px;
