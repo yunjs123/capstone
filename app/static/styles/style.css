@@ -16,7 +16,7 @@
     position:absolute;
     z-index:7;
     box-shadow:  0 0 10px  rgba(0,0,0,0.6);
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    background-color:white;
     top:7%;
     height:540px;
     right: 5%;
@@ -75,7 +75,8 @@ nav ul li a:hover{
 }
 
 body{
-    background-image:url("/static/background.jpg");
+    /*background-image:url("/static/background.jpg");*/
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
