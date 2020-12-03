@@ -1,18 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luckiest+Guy&family=Ropa+Sans&display=swap');
 .mapContainer{
     border-style:solid;
-    border-width: 15px;
-    border-color:white;
-    height: 570px;
+    border-width: 0px;
+    height: 750px;
+    margin-top: 4%;
+}
+.square{
+    background-color: #7db4ca4f;
+    border-style:solid;
+    border-width: .5px;
+    border-color:whitesmoke;
+    width:750px;
+    height: 525px;
+    position:absolute;
+    top:90px;
+    left:390px;
+    box-shadow:0 0 10px  rgba(0,0,0,0.6);
 }
 .mapWrapper{
-    transform: scale(.65);
-    padding-top: 0%;
-    margin-top:-12.5%;
-    
+    position: relative;
+    transform: scale(.60);
+    margin-top:-14.1%;
+    left: 9%
+}
+#home-wrapper{
+    position:absolute;
+    z-index:7;
+    box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+    background-color:white;
+    top:7%;
+    height:540px;
+    right: 5%;
+    left: 5%;
+}
+#illustration{
+    position: absolute;
+    height:200px;
+    left:52%;
+    bottom: 35%;
 }
 g :hover{
-    fill:blue;
+    fill: #f3feff;
 }
 ul{
     list-style:none;
@@ -20,17 +48,31 @@ ul{
 nav{
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 1;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
-nav #top{
-    position: absolute;
-    left: 2%;
+nav a #top{
+    position:absolute;
+    left:1%;
+    margin-top: -3.8%;  
+}
+nav #filler{
+    position:absolute;
+    left:80%;
+}
+nav form{
+    position:absolute;
+    left:80%;
 }
 nav ul{
     display:flex;
-    margin:0%;
+    justify-content: center;
+    position:absolute;
+    left:37%;
     padding:0%;
+    text-align:center;
 }
 nav ul li a{
     display:flex;
@@ -40,11 +82,13 @@ nav ul li a{
 }
 nav ul li a:hover{
     transition: all .2s ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.4);
 }
 
 body{
-    background-image:url("/static/background.jpg");
+    /*background-image:url("/static/background.jpg");*/
+    /*background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -64,6 +108,7 @@ body h2{
     padding-left: 10%;
     transform: translate(5%, -300%);
     font-family: 'Ropa Sans', sans-serif;
+    color: grey;
 }
 
 #myData{
@@ -71,15 +116,18 @@ body h2{
     width: 50%;
     padding-top: 40px;
     display: block;
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 150px;
+    position:absolute;
+    text-align:center;
+    top:50px;
+    right: 800px;
+
 }
 
- /*
 .search_box{
     position: absolute;
     left: 50%;
-    top: 500px;
+    top: auto;
     transform: translate(-50%, -50%);
     background: #2f3640;
     height: 40px;
@@ -117,4 +165,31 @@ body h2{
     transition: 0.4s;
     line-height: 40px;
     width: 0px;
-}*/
+}
+.searching{
+    display:flex;
+    justify-content: space-evenly;
+}
+input[type=text].search-other{
+    height:auto;
+    margin-top: 3px;
+    border-radius: 25px;
+}
+.btn-grad {background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%)}
+.btn-grad {
+   margin: 2px;
+   padding: auto;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }

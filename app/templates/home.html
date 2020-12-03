@@ -14,9 +14,10 @@
 </head>
 
 <body>
+    <div id="home-wrapper">
     <nav>
         <!--logo here-->
-        <h1 id="top">LogoHere</h1>
+        <a href="/"><img src="/static/logo.png" id="top" width="100"></a>
         <!--menu here-->
         <ul class="menu">
             <li><a href="/">Home</a></li>
@@ -24,21 +25,19 @@
             <li><a href="/login">Sign in</a></li>
             <li><a href="/map">Map</a></li>
         </ul>
-        <form action="/map" method="POST">
-            <input type="text" name="search" id="search"></input>
-            <input type="submit">
-        </form>
+        <div id="filler"></div>
     </nav>
     <h1 class="welcome"> AtmoDust</h1>
     <h2>SOME DESCRIPTION OF OUR SITE</h2>
-        <div class="search_box">
-            <form action="/map" method="POST">
+    <img id="illustration" src="/static/weather.png">
+    <form action="/map" method="POST">
+        <div class="search_box">        
                 <input class="search_text" type="text" name="search" id="search" placeholder="Which state do you live in?"></input>
                 <button type="submit" formmethod="post" class="search_button" href='/chart'>
-                    <i class="fas fa-search"></i>
-            </form>
+                    <i class="fas fa-search"></i>   
         </div>
-
+    </form> 
+    </div>
 </body>
 
 </html>

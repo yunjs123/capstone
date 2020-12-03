@@ -14,17 +14,22 @@
 <body>
         <nav>
             <!--logo here-->
-            <h1 id="top">LogoHere</h1>
+            <a href="/"><img src="/static/logo.png" id="top" width="100"></a>
             <!--menu here-->
             <ul class="menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/login">Sign in</a></li>
-                <li><a href="/chart">Chart</a></li>
+                <li><a href="/map">Map</a></li>
             </ul>
+            <form action="/map" method="POST" class="searching">
+                <input type="text" name="search" class="search-other" placeholder="Which state do you live in?"></input>
+                <input type="submit" class="btn-grad">
+            </form>
         </nav>
     
     <div class="mapContainer">
+        <div class="square"></div>
     <div class="mapWrapper">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1100 800">
             <defs>
