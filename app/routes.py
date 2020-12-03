@@ -10,10 +10,11 @@ import math
 import io
 import shutil
 import json
+from datetime import datetime
 
 email = "jstrahl1@uncc.edu"
 key = "bluecat44"
-daily_url = "https://s3-us-west-1.amazonaws.com//files.airnowtech.org/airnow/today/HourlyData_2020111700.dat"
+daily_url = "https://s3-us-west-1.amazonaws.com//files.airnowtech.org/airnow/today/HourlyData_"
 
 daily_data = []
 
@@ -99,7 +100,7 @@ def download(location):
                 daily_data.append(line.split("|"))
         return
     else:
-        data_name = wget.download(daily_url, out=f"app/files/daily.dat")
+        data_name = wget.download(daily_url + f"2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}.dat", out=f"app/files/daily.dat")
         print("Downlaoded from API")
         with open('app/files/daily.dat', encoding='utf-8') as file1:
             Lines = file1.readlines()
