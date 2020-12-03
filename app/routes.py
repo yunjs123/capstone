@@ -43,35 +43,29 @@ def favicon():
 @app.route('/map', methods=['GET', 'POST'])
 def map():
     if request.method == 'POST':
+        data_collected = []
         print("POST REQUEST")
         state = request.form.get('search')
-        data = download(convert_state(state))
-        data = daily_data[4446]
-        data_collected = [daily_data[4446][8]]
-
-        data_collected.append(daily_data[4445][5])
-        data_collected.append(daily_data[4445][6])
-        data_collected.append(daily_data[4445][7])
-
-        data_collected.append(daily_data[4446][5])
-        data_collected.append(daily_data[4446][6])
-        data_collected.append(daily_data[4446][7])
-
-        data_collected.append(daily_data[4447][5])
-        data_collected.append(daily_data[4447][6])
-        data_collected.append(daily_data[4447][7])
-
-        data_collected.append(daily_data[4448][5])
-        data_collected.append(daily_data[4448][6])
-        data_collected.append(daily_data[4448][7])
-
+        data = download()
+        search = convert_string(state)
+        print(search)
+        for i, n in enumerate(daily_data):
+            if search in n[3].lower() or search in n[8].lower():
+                data_collected.append(n[5])
+                data_collected.append(n[6])
+                data_collected.append(n[7])
+                if data_collected[0] != n[8]:
+                    data_collected.insert(0, n[8])
+                
+        print(data_collected)
+        
         data_collected.append(daily_data[4448][0])
         #4454
         return render_template("chart.html", data=data_collected)
     return render_template("chart.html", data='')
 
 
-def convert_state(state):
+def convert_string(search):
     num = 0
     state_names = ["" , "alaska", "alabama", "arkansas", "arizona", "california", "colorado", "connecticut", "delaware", "florida", "georgia", "hawaii", "iowa", "idaho", "illinois", "indiana", "kansas", "kentucky", "louisiana", "massachusetts", "maryland", "maine", "michigan", "minnesota", "missouri", "mississippi", "montana", "north narolina", "north dakota", "nebraska", "new hampshire", "new jersey", "new mexico", "nevada", "new york", "ohio", "oklahoma", "oregon", "pennsylvania", "rhode island", "south carolina", "south dakota", "tennessee", "texas", "utah", "virginia", "vermont", "washington", "wisconsin", "west virginia", "wyoming"]
     states = ["", "al", "ak", "az", "ar", "ca", "co", "ct", "de", "fl", "ga", 
@@ -79,18 +73,15 @@ def convert_state(state):
           "ma", "mi", "mn", "ms", "mo", "mt", "ne", "nv", "nh", "nj", 
           "nm", "ny", "nc", "nd", "oh", "ok", "or", "pa", "ri", "sc", 
           "sd", "tn", "tx", "ut", "vt", "va", "wa", "wv", "wi", "wy"]
-    state = state.lower()
-    try:
-        num = state_names.index(state)+3
-        if num == 0:
-            num = states.index(state.lower())+2
-    except:
-        num = 0
-    
-    return num
+    search = search.lower()
+    for i, ele in enumerate(states):
+        if search in ele:
+            search = state_names[i]
+            break
+    return search
 
 
-def download(location):
+def download():
     #url = f"https://aqs.epa.gov/data/api/dailyData/bySite?email={email}&key={key}&param=44201&bdate=20201001&edate=20201002&state={location}&county=119&site=0046"
 
     if os.path.exists(f"app/files/daily.dat") and len(daily_data) > 0:
