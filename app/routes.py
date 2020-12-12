@@ -16,6 +16,9 @@ email = "jstrahl1@uncc.edu"
 key = "bluecat44"
 daily_url = "https://s3-us-west-1.amazonaws.com//files.airnowtech.org/airnow/today/HourlyData_"
 
+risks = ["No health risks today", "If you have sensative lungs you might not want to stay outside very long today, maybe an hour at most", "No outdoor activities, children should not be out", 
+"Only go outside if you really have to or atleast limit your time", "Do not go outside if you can"]
+
 daily_data = []
 
 #Default Route
@@ -54,6 +57,7 @@ def map():
                 data_collected.append(n[5])
                 data_collected.append(n[6])
                 data_collected.append(n[7])
+                data_collected.append(compare_values(n[7]))
                 if data_collected[0] != n[8]:
                     data_collected.insert(0, n[8])
                 
@@ -61,7 +65,7 @@ def map():
         
         data_collected.append(daily_data[4448][0])
         #4454
-        return render_template("chart.html", data=data_collected)
+        return render_template("chart.html", data=data_collected, name_list=risks)
     return render_template("chart.html", data='')
 
 
@@ -98,6 +102,21 @@ def download():
             for line in Lines:
                 daily_data.append(line.split("|"))
         return
+
+#Air quality index basic evaluation 
+def compare_values(sev):
+    sev = float(sev)
+    if sev <= 50:
+        level = 0
+    elif sev > 50 and sev <= 100:
+        level = 1
+    elif sev > 100 and sev <= 150:
+        level = 2
+    elif sev > 150 and sev <= 200:
+        level = 3
+    elif sev > 200:
+        level = 4
+    return level
 
 #setting up the server log
 format = logging.Formatter('%(asctime)s %(message)s')

@@ -221,12 +221,21 @@
 
         console.log({{data|tojson}});
         var data1 = {{data|tojson}};
+        
+        document.getElementById('myData').innerHTML += "<h1>" + data1[0] + "</h1>";
+        document.getElementById('myData').innerHTML += "<table><tbody>";
+            var i;
+            for (i = 1; i<data1.length; i+=4) {
+                if (data1[i] == "OZONE" || data1[i] == "PM10" || data1[i] == "PM2.5"){
+                    document.getElementById('myData').innerHTML += "<tr><td>" + data1[i] + ": "+ data1[i+2] + " " + data1[i+1] + "</td><td>" + data1[i+3] + "</td></tr> <br>";
+                } else {
+                    document.getElementById('myData').innerHTML += "<tr><td>" + data1[i] + ": "+ data1[i+2] + " " + data1[i+1] + "</td>" + "</tr> <br>";
+                }
+            }
+        
 
-        document.getElementById('myData').innerHTML += "<br><h2>" + data1[0] + 
-                                        "</h2><br><strong>" + data1[1] + "</strong>: " + data1[3] + " " + data1[2] +
-                                        "</h2><br><strong>" + data1[4] + "</strong>: " + data1[6] + " " + data1[5] + 
-                                        "</h2><br><strong>" + data1[7] + "</strong>: " + data1[9] + " " + data1[8] +
-                                        "</h2><br><strong>" + data1[10] + "</strong>: " + data1[12] + " " + data1[11];;
+
+        document.getElementById('myData').innerHTML += "</tbody></table>";
     </script>
 
 
