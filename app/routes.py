@@ -65,7 +65,7 @@ def map():
         
         data_collected.append(daily_data[4448][0])
         #4454
-        return render_template("chart.html", data=data_collected, name_list=risks)
+        return render_template("chart.html", data=data_collected, risk_list=risks)
     return render_template("chart.html", data='')
 
 
