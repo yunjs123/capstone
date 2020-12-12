@@ -20,11 +20,13 @@
 .mapWrapper{
     position: relative;
     transform: scale(.60);
-    margin-top:-14.1%;
+    margin-top:-12.5%;
     left: 9%
 }
 #home-wrapper{
     position:absolute;
+    margin-top:5%;
+    margin-bottom:5%;
     z-index:7;
     box-shadow:  0 0 10px  rgba(0,0,0,0.6);
     background-color:white;
@@ -95,6 +97,7 @@ body{
     background-attachment: fixed;
     margin: 0;
     padding: 0;
+    position:relative;
 }
 
 .welcome{
