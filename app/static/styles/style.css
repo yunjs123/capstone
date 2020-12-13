@@ -20,26 +20,28 @@
 .mapWrapper{
     position: relative;
     transform: scale(.60);
-    margin-top:-12.5%;
+    margin-top:-14.1%;
     left: 9%
 }
 #home-wrapper{
-    position:absolute;
+    position:relative;
     margin-top:5%;
     margin-bottom:5%;
     z-index:7;
     box-shadow:  0 0 10px  rgba(0,0,0,0.6);
     background-color:white;
-    top:7%;
-    height:540px;
-    right: 5%;
-    left: 5%;
+    left:5%;
+    right:5%;
+    height:500px;
+    width: 90%;
+    
+    
 }
 #illustration{
-    position: absolute;
+    position:absolute;
     height:200px;
     left:52%;
-    bottom: 35%;
+    bottom: 15%;
 }
 g :hover{
     fill: #f3feff;
@@ -56,13 +58,9 @@ nav{
     margin-bottom: 2%;
 }
 nav a #top{
-    position:absolute;
+    position:relative;
     left:1%;
     margin-top: -3.8%;  
-}
-nav #filler{
-    position:absolute;
-    left:80%;
 }
 nav form{
     position:absolute;
@@ -97,19 +95,20 @@ body{
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-    position:relative;
 }
 
-.welcome{
+.welcome,h1{
+    position:absolute;
     font-size: 7em;
     padding-left: 10%;
-    padding-top: 5%;
+    top:16%;
     font-family: 'Indie Flower', cursive;
 }
 
 body h2{
-    padding-left: 10%;
-    transform: translate(5%, -300%);
+    position:absolute;
+    top:75%;
+    left: 10%;
     font-family: 'Ropa Sans', sans-serif;
     color: grey;
 }
@@ -130,7 +129,7 @@ body h2{
 .search_box{
     position: absolute;
     left: 50%;
-    top: auto;
+    top:90%;
     transform: translate(-50%, -50%);
     background: #2f3640;
     height: 40px;
