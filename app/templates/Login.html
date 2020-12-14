@@ -83,9 +83,10 @@ For testing purposes, type into address bar the following: localhost5500/Login.h
         
 }
 
-function onSuccess(googleUser) {
+    function onSuccess(googleUser) {
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-      window.location.href='www.google.com';
+      window.location.href = 'http://www.google.com';
+        
     }
     
 </script>
