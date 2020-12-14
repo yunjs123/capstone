@@ -1,29 +1,32 @@
-
 <!Doctype html>
 <html lang='en'>
     
-    <head>
+<!--Client ID
+          <link rel="stylesheet" href="about.css">
+-->
+
+
+
+<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>About Us</title>
         <link rel="stylesheet" href="{{ url_for('static',filename='styles/about.css') }}">
-    </head>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+</head>
 
 <body>
-  <nav>
-    <!--logo here-->
-    <h1 id="top">LogoHere</h1>
-    <!--menu here-->
-    <ul class="menu">
-        <li><a href="/">Home</a></li>
+    <a href="/"><img src="/static/logo.png" id="top" width="100"></a>
+    <ul class="navBar">
+        <li><a href="/home">Home</a></li>
         <li><a href="/about">About Us</a></li>
         <li><a href="/login">Sign in</a></li>
-        <li><a href="/chart">Chart</a></li>
+        <li><a href="/map">Map</a></li>
     </ul>
-</nav>
 
-  <h1>About Us</h1>
+  <h1 style="text-decoration: underline;">About Us</h1> 
   <h2>The Project</h2>
   AtmoDust is a senior design project done by 3 UNCC Undergraduates in The College of Computing and Informatics. <br>
   Our goal was to make a website that enables users to check air quality from their nearest air sampling location.<br>
@@ -35,8 +38,7 @@
   <h2>Acknowledgements</h2>
   We would like to thank the EPA for providing the information publically and free.<br>
   A special thanks goes to UNCC and the College of Computing and Informatics.
-
-  <h1>Contact Us</h1>
+  <h1 style="text-decoration: underline;">Contact Us</h1>
 
 
 <form>
