@@ -11,11 +11,11 @@
 </head>
 
 
-<body>
+<body id="map-body">
         <nav>
             <!--logo here-->
             <a href="/"><img src="/static/logo.png" id="top" width="100"></a>
-            <!--menu here-->
+            <!--menu here--> 
             <ul class="menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about">About Us</a></li>
@@ -27,9 +27,10 @@
                 <input type="submit" class="btn-grad">
             </form>
         </nav>
-    
+    <div class="break"></div>
+    <div id="myData"></div>
     <div class="mapContainer">
-        <div class="square"></div>
+        <!--<div class="square"></div>-->
     <div class="mapWrapper">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1100 800">
             <defs>
@@ -155,11 +156,13 @@
     </div>
 </div>
     <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
-
-
-<div id="myData"></div>
-
-
+    <div class="break"></div>
+    <div id="prediction">
+        <h3>Prediction Header</h3>
+        <div id="prediction-data">
+            <h4>Some predicton data goes here</h4>
+        </div>
+    </div>
 </body>
 
 
