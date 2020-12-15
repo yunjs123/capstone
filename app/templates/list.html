@@ -1,0 +1,40 @@
+<!Doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <title>Chart</title>
+</head>
+
+
+<body>
+    <nav>
+        <!--logo here-->
+        <a href="/"><img src="/static/logo.png" id="top" width="100"></a>
+        <!--menu here--> 
+        <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/login">Sign in</a></li>
+            <li><a href="/places">Locations</a></li>
+        </ul>
+        <form action="/map" method="POST" class="searching">
+            <input type="text" name="search" class="search-other" placeholder="Which state do you live in?"></input>
+            <input type="submit" class="btn-grad">
+        </form>
+    </nav>
+<div id="list"></div>
+</body>
+
+<script>
+var data = {{data|tojson}};
+for (i = 0; i<data.length; i++) {
+    document.getElementById('list').innerHTML += "<a href=\"map?location=" + data[i] + "\">" + data[i] + "</a><br>";
+}
+</script>
+
+</html>

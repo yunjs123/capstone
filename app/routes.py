@@ -21,6 +21,8 @@ risks = ["No health risks today", "If you have sensative lungs you might not wan
 
 daily_data = []
 
+loca = []
+
 #Default Route
 @app.route('/')
 def index():
@@ -45,11 +47,15 @@ def favicon():
 
 @app.route('/map', methods=['GET', 'POST'])
 def map():
-    if request.method == 'POST':
+    if request.method == 'POST' or request.args.get("location") is not None:
         data_collected = []
         print("POST REQUEST")
-        state = request.form.get('search')
+        if request.method == 'POST':
+            state = request.form.get('search')
+        else:
+            state = request.args.get("location")
         data = download()
+        load_loca()
         search = convert_string(state)
         print(search)
         for i, n in enumerate(daily_data):
@@ -67,6 +73,10 @@ def map():
         #4454
         return render_template("chart.html", data=data_collected, risk_list=risks)
     return render_template("chart.html", data='')
+
+@app.route('/places')
+def places():
+    return render_template("list.html", data=loca)
 
 
 def convert_string(search):
@@ -93,6 +103,7 @@ def download():
             Lines = file1.readlines()
             for line in Lines:
                 daily_data.append(line.split("|"))
+        load_loca()
         return
     else:
         data_name = wget.download(daily_url + f"2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}.dat", out=f"app/files/daily.dat")
@@ -101,6 +112,7 @@ def download():
             Lines = file1.readlines()
             for line in Lines:
                 daily_data.append(line.split("|"))
+        load_loca()
         return
 
 #Air quality index basic evaluation 
@@ -117,6 +129,12 @@ def compare_values(sev):
     elif sev > 200:
         level = 4
     return level
+
+def load_loca():
+    for x in daily_data:
+        if x[8] not in loca:
+            loca.append(x[8])
+    return
 
 #setting up the server log
 format = logging.Formatter('%(asctime)s %(message)s')
@@ -137,4 +155,5 @@ if os.path.exists(f"app/files/daily.dat"):
             Lines = file1.readlines()
             for line in Lines:
                 daily_data.append(line.split("|"))
+        load_loca()
         
