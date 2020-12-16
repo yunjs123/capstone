@@ -32,7 +32,8 @@
     <div class="mapContainer">
         <!--<div class="square"></div>-->
     <div class="mapWrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1100 800">
+        
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1100 800">
             <defs>
                 <style type="text/css">
                     .land {
@@ -44,8 +45,7 @@
                     }
                 </style>
             
-                <!-- All areas are listed in the line below. You can use this list in your script. -->
-                <!--{id:"US-AK"},{id:"US-AL"},{id:"US-AR"},{id:"US-AZ"},{id:"US-CA"},{id:"US-CO"},{id:"US-CT"},{id:"US-DC"},{id:"US-DE"},{id:"US-FL"},{id:"US-GA"},{id:"US-HI"},{id:"US-IA"},{id:"US-ID"},{id:"US-IL"},{id:"US-IN"},{id:"US-KS"},{id:"US-KY"},{id:"US-LA"},{id:"US-MA"},{id:"US-MD"},{id:"US-ME"},{id:"US-MI"},{id:"US-MN"},{id:"US-MO"},{id:"US-MS"},{id:"US-MT"},{id:"US-NC"},{id:"US-ND"},{id:"US-NE"},{id:"US-NH"},{id:"US-NJ"},{id:"US-NM"},{id:"US-NV"},{id:"US-NY"},{id:"US-OH"},{id:"US-OK"},{id:"US-OR"},{id:"US-PA"},{id:"US-RI"},{id:"US-SC"},{id:"US-SD"},{id:"US-TN"},{id:"US-TX"},{id:"US-UT"},{id:"US-VA"},{id:"US-VT"},{id:"US-WA"},{id:"US-WI"},{id:"US-WV"},{id:"US-WY"}-->
+                
 
             </defs>
             <g>
@@ -152,13 +152,18 @@
                 <path id="US-WY" title="Wyoming" class="land"
                     d="M499.16,180.45L495.46,226.79L491.58,271.97L474.43,270.36L440.2,266.58L423.12,264.4L406.05,262.04L372.15,256.16L375.87,234.37L385.21,178.56L384.7,178.06L385.13,177.31L386.97,165.87L418.47,170.63L443.38,174.28L472.33,177.57z" />
             </g>
-        </svg>
+        </svg> -->
+
+        <!--{id:"US-AK"},{id:"US-AL"},{id:"US-AR"},{id:"US-AZ"},{id:"US-CA"},{id:"US-CO"},{id:"US-CT"},{id:"US-DC"},{id:"US-DE"},{id:"US-FL"},{id:"US-GA"},{id:"US-HI"},{id:"US-IA"},{id:"US-ID"},{id:"US-IL"},{id:"US-IN"},{id:"US-KS"},{id:"US-KY"},{id:"US-LA"},{id:"US-MA"},{id:"US-MD"},{id:"US-ME"},{id:"US-MI"},{id:"US-MN"},{id:"US-MO"},{id:"US-MS"},{id:"US-MT"},{id:"US-NC"},{id:"US-ND"},{id:"US-NE"},{id:"US-NH"},{id:"US-NJ"},{id:"US-NM"},{id:"US-NV"},{id:"US-NY"},{id:"US-OH"},{id:"US-OK"},{id:"US-OR"},{id:"US-PA"},{id:"US-RI"},{id:"US-SC"},{id:"US-SD"},{id:"US-TN"},{id:"US-TX"},{id:"US-UT"},{id:"US-VA"},{id:"US-VT"},{id:"US-WA"},{id:"US-WI"},{id:"US-WV"},{id:"US-WY"}-->
+        <div id="cig"></div>
+        <img id="cig_img" src="/static/cig.png" width="40%">
+
     </div>
 </div>
     <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
     <div class="break"></div>
     <div id="prediction">
-        <h3>Prediction Header</h3>
+        <h3>Tomorrows Forcast</h3>
         <div id="prediction-data">
             <h4>Some predicton data goes here</h4>
         </div>
@@ -213,13 +218,13 @@
 
     <script>
 
-            $(document).ready(function(){
+            /*$(document).ready(function(){
                 $('#US-NC').on("click", function(e){
                     $.post('/map',
                     {search: 'NC'}
                     )
                 });
-            });
+            });*/
 
 
         console.log({{data|tojson}});
@@ -233,6 +238,7 @@
             var stop1 = 0;
             var air_avg = 0;
             var count = 0;
+            var cig = 0;
             for (i = 1; i<data1.length; i+=4) {
                 if (data1[i] == "OZONE"){ //Ignore all this, prevent duplicate data from being displayed
                     stop1 += 1;
@@ -247,12 +253,17 @@
                 } else {
                     document.getElementById('myData').innerHTML += "<tr><td>" + data1[i] + ": "+ data1[i+2] + " " + data1[i+1] + "</td>" + "</tr> <br>";
                 }
+                if (data1[i] == "PM2.5"){
+                    cig = data1[i+2];
+                }
             }
         document.getElementById('myData').innerHTML += "</tbody></table>";
 
         document.getElementById('myData').innerHTML += "<h3>" + risks[Math.floor(air_avg/count)] + "</h3>";
         console.log(Math.floor(air_avg/count));
-
+        
+        document.getElementById('cig').innerHTML = "Being outside today is like smoking <h3>" + (cig/21).toFixed(2) + "</h3> cigarettes";
+        //every 21 2.5pm = 1 cig
 
     </script>
 

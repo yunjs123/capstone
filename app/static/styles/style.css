@@ -206,3 +206,17 @@ input[type=text].search-other{
  #prediction-data{
      background-color:whitesmoke;
  }
+
+ #cig_img{
+     position: absolute;
+     right: 0;
+     display: inline-block;
+     margin-top: 20%;
+ }
+
+ #cig{
+     text-align: left;
+     display: inline-block;
+     margin-left: 10%;
+     margin-top: 20%;
+ }

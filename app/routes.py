@@ -59,7 +59,7 @@ def map():
         search = convert_string(state)
         print(search)
         for i, n in enumerate(daily_data):
-            if search in n[3].lower() or search in n[8].lower():
+            if (search in n[3].lower() or search in n[8].lower()) and (n[5] not in data_collected) :
                 data_collected.append(n[5])
                 data_collected.append(n[6])
                 data_collected.append(n[7])
@@ -98,17 +98,19 @@ def convert_string(search):
 def download():
     #url = f"https://aqs.epa.gov/data/api/dailyData/bySite?email={email}&key={key}&param=44201&bdate=20201001&edate=20201002&state={location}&county=119&site=0046"
 
-    if os.path.exists(f"app/files/daily.dat") and len(daily_data) > 0:
-        with open('app/files/daily.dat', encoding='utf-8') as file1:
+    if os.path.exists(f"app/files/2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}00.dat") and len(daily_data) > 0:
+        with open(f"app/files/2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}00.dat", encoding='utf-8') as file1:
             Lines = file1.readlines()
             for line in Lines:
                 daily_data.append(line.split("|"))
         load_loca()
         return
     else:
-        data_name = wget.download(daily_url + f"2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}.dat", out=f"app/files/daily.dat")
+        print("Downlaoding from API")
+        print(daily_url + f"2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}.dat")
+        data_name = wget.download(daily_url + f"2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}00.dat", out=f"app/files/2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}00.dat")
         print("Downlaoded from API")
-        with open('app/files/daily.dat', encoding='utf-8') as file1:
+        with open(f"app/files/2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}00.dat", encoding='utf-8') as file1:
             Lines = file1.readlines()
             for line in Lines:
                 daily_data.append(line.split("|"))
@@ -136,6 +138,11 @@ def load_loca():
             loca.append(x[8])
     return
 
+def next_day():
+    pred = ""
+
+    return pred
+
 #setting up the server log
 format = logging.Formatter('%(asctime)s %(message)s')
 logFile = 'log.log'
@@ -150,8 +157,8 @@ app_log.setLevel(logging.DEBUG)
 app_log.addHandler(my_handler)
 
 
-if os.path.exists(f"app/files/daily.dat"):
-        with open('app/files/daily.dat', encoding='utf-8') as file1:
+if os.path.exists(f"app/files/2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}00.dat"):
+        with open(f"app/files/2020{datetime.now().strftime('%m')}{datetime.now().strftime('%d')}00.dat", encoding='utf-8') as file1:
             Lines = file1.readlines()
             for line in Lines:
                 daily_data.append(line.split("|"))
