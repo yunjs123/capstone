@@ -165,7 +165,7 @@
     <div id="prediction">
         <h3>Tomorrows Forcast</h3>
         <div id="prediction-data">
-            <h4>Some predicton data goes here</h4>
+            
         </div>
     </div>
 </body>
@@ -230,7 +230,8 @@
         console.log({{data|tojson}});
         var data1 = {{data|tojson}};
         var risks = {{risk_list|tojson}};
-        console.log(risks)
+        var pred = {{prediction|tojson}}
+        console.log(pred)
         
         document.getElementById('myData').innerHTML += "<h1>" + data1[0] + "</h1>";
         document.getElementById('myData').innerHTML += "<table><tbody>";
@@ -264,6 +265,12 @@
         
         document.getElementById('cig').innerHTML = "Being outside today is like smoking <h3>" + (cig/21).toFixed(2) + "</h3> cigarettes";
         //every 21 2.5pm = 1 cig
+        
+        document.getElementById('prediction-data').innerHTML += "<h4><table><tbody>"
+        for (i = 0; i < pred.length; i+=4){
+            document.getElementById('prediction-data').innerHTML += "<tr><td>" + pred[i] + ": "+ pred[i+2] + " " + pred[i+1] + "</td><td>" + pred[i+3] + "</td></tr> <br>"
+        }
+        document.getElementById('prediction-data').innerHTML += "</tbody></table></h4>"
 
     </script>
 
