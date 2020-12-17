@@ -8,7 +8,7 @@
     border-width: .5px;
     border-color:whitesmoke;
     width:750px;
-    height: 525px;
+    height: 425px;
     box-shadow:0 0 10px  rgba(0,0,0,0.6);
     position:relative;
     left: 3.5%;
@@ -195,16 +195,55 @@ input[type=text].search-other{
    color: #fff;
    text-decoration: none;
  }
- #prediction{
+ .prediction{
+    background:white;;
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+    border-radius: 100px;
     position:relative;
-    background-color:white;
     top:100px;
-    left:40%;
-    border-radius:10px;
+    left:34%;
+    height:150px;
+    width:350px;
     text-align:center;
  }
+ .prediction,h3{
+    padding-top:25px;
+ }
+ .inside-prediction{
+     position:relative;
+     top:-82%;
+ }
+ .prediction::before, .prediction::after{
+    content:"";
+    position:relative;
+    display:inline-block;
+    background:inherit;
+    border-radius:inherit;
+}
+.prediction::before{
+    width:100px;
+    height:100px;
+    top:-35%;
+    left:-20%;
+
+}
+.prediction::after{
+        bottom: 199%; 
+        left: 40%; 
+        transform: translate(-50%, -50%); 
+        height: 100px; 
+        width: 200px; 
+        border-radius: 150px 150px 0 0;
+        background:white;
+}
+
  #prediction-data{
-     background-color:whitesmoke;
+     color:black;
+     position:relative;
+     width:50%;
+     left:25%;
+     border-radius:25px;
+     top:-10px;
  }
 
  #cig_img{
